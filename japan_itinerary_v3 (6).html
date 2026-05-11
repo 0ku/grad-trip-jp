@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japan — 33 Days · May 11 – June 12, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Shippori+Mincho:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1208;
+    --paper: #f5f0e8;
+    --paper2: #ede7d6;
+    --red: #c0392b;
+    --red-light: #e74c3c;
+    --sakura: #e8a0a0;
+    --gold: #b8860b;
+    --muted: #6b5c44;
+    --border: #c8b89a;
+    --new: #1a6b3c;
+    --new-light: #e8f5ee;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 64px 48px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '日本';
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Shippori Mincho', serif;
+    font-size: 148px;
+    opacity: 0.06;
+    letter-spacing: -8px;
+    line-height: 1;
+    user-select: none;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 6px; height: 100%;
+    background: var(--red);
+  }
+  .header-kana {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 12px;
+    letter-spacing: 6px;
+    color: var(--sakura);
+    margin-bottom: 16px;
+    opacity: 0.8;
+  }
+  header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+  }
+  header h1 em { font-style: italic; color: var(--sakura); }
+  .header-meta {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
+  .meta-item { display: flex; flex-direction: column; gap: 4px; }
+  .meta-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--sakura); opacity: 0.7; }
+  .meta-value { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: var(--paper); }
+
+  /* ── LEGEND ── */
+  .legend-bar {
+    background: var(--paper2);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 48px;
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .legend-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-right: 4px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+  .leg-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+  /* ── LOGISTICS ── */
+  .logistics-section {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 40px 48px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .logistics-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--red-light);
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+  .logistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .logistics-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 8px;
+    padding: 18px 22px;
+  }
+  .logistics-card h3 {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--sakura);
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .logistics-card p, .logistics-card li {
+    font-size: 13.5px;
+    color: rgba(245,240,232,0.82);
+    line-height: 1.6;
+  }
+  .logistics-card ul { padding-left: 16px; }
+  .logistics-card li { margin-bottom: 4px; }
+
+  /* ── HOTELS ── */
+  .hotels-section {
+    background: #f0ebe0;
+    border-bottom: 2px solid var(--border);
+    padding: 32px 48px;
+  }
+  .hotels-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  .hotels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .hotel-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+    border-left: 4px solid var(--red);
+  }
+  .hotel-phase { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--red); font-weight: 500; margin-bottom: 6px; }
+  .hotel-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: var(--ink); line-height: 1.2; margin-bottom: 4px; }
+  .hotel-dates { font-size: 12px; color: var(--muted); margin-bottom: 6px; font-weight: 400; }
+  .hotel-address { font-size: 12px; color: #888; line-height: 1.4; }
+
+  /* ── PHASE HEADERS ── */
+  .phase-header {
+    padding: 40px 48px 28px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-end;
+    gap: 32px;
+  }
+  .phase-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 96px;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--border);
+    letter-spacing: -4px;
+    flex-shrink: 0;
+  }
+  .phase-info { padding-bottom: 6px; }
+  .phase-city { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 600; line-height: 1; color: var(--ink); letter-spacing: -1px; }
+  .phase-city span { font-family: 'Shippori Mincho', serif; font-weight: 700; color: var(--red); }
+  .phase-dates { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+  .phase-desc { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; color: var(--muted); margin-top: 6px; max-width: 520px; }
+
+  /* ── DAY CARDS ── */
+  .days-container { padding: 0 48px 48px; }
+  .day-card {
+    border-bottom: 1px solid var(--border);
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 28px;
+  }
+  .day-sidebar { padding-top: 4px; }
+  .day-number { display: none; }
+  .day-date { display: flex; flex-direction: column; gap: 2px; margin-bottom: 8px; }
+  .day-weekday { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); font-weight: 500; font-family: 'DM Sans', sans-serif; }
+  .day-datenum { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 600; color: var(--ink); line-height: 1.1; }
+  .day-tag {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+  .tag-active   { background: var(--red); color: white; }
+  .tag-rest     { background: var(--paper2); color: var(--muted); border: 1px solid var(--border); }
+  .tag-daytrip  { background: var(--ink); color: var(--paper); }
+  .tag-travel   { background: var(--gold); color: white; }
+  .tag-transit  { background: #5a7da6; color: white; }
+  .tag-birthday { background: #8b2fc9; color: white; }
+
+  .day-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+  .day-content h4 {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 14px 0 6px;
+    font-weight: 500;
+  }
+  .activity-list { list-style: none; margin-bottom: 12px; }
+  .activity-list li {
+    padding: 4px 0 4px 20px;
+    position: relative;
+    font-size: 14px;
+    color: #333;
+  }
+  .activity-list li::before { content: '—'; position: absolute; left: 0; color: var(--border); }
+  .activity-list li strong { font-weight: 500; }
+  .activity-list li.new-item::before { content: '★'; color: var(--new); font-size: 11px; top: 7px; }
+  .activity-list li.new-item { color: #1a1208; }
+
+  /* new badge */
+  .new-badge {
+    display: inline-block;
+    background: var(--new);
+    color: white;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 10px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+
+  /* highlight block for new additions */
+  .new-section {
+    background: var(--new-light);
+    border: 1px solid rgba(26,107,60,0.2);
+    border-left: 3px solid var(--new);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 12px 0;
+  }
+  .new-section-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--new);
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .new-section-label::before { content: '★'; font-size: 9px; }
+  .new-section ul { list-style: none; }
+  .new-section li {
+    padding: 3px 0 3px 16px;
+    position: relative;
+    font-size: 14px;
+    color: #1f3d29;
+  }
+  .new-section li::before { content: '·'; position: absolute; left: 4px; color: var(--new); font-size: 16px; top: 0; }
+  .new-section p { font-size: 14px; color: #1f3d29; line-height: 1.55; }
+
+  /* logistics note */
+  .logistics-note {
+    background: var(--paper2);
+    border-left: 3px solid var(--gold);
+    padding: 11px 15px;
+    font-size: 13px;
+    color: var(--muted);
+    margin: 10px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .logistics-note strong { color: var(--ink); font-weight: 500; }
+
+  /* food block */
+  .food-block {
+    background: linear-gradient(135deg, rgba(192,57,43,0.05), rgba(232,160,160,0.08));
+    border: 1px solid rgba(192,57,43,0.15);
+    border-radius: 8px;
+    padding: 13px 17px;
+    margin-top: 12px;
+  }
+  .food-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .food-label::before { content: '◉'; font-size: 8px; }
+  .food-block p { font-size: 13.5px; color: #444; line-height: 1.5; }
+  .food-block p strong { color: var(--red); font-weight: 500; }
+
+  /* tip box */
+  .tip-box {
+    background: rgba(184,134,11,0.06);
+    border: 1px solid rgba(184,134,11,0.22);
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+  }
+  .tip-box::before { content: '★ TIP  '; color: var(--gold); font-weight: 600; font-size: 10px; letter-spacing: 2px; }
+
+  /* section divider */
+  .section-divider {
+    height: 7px;
+    background: repeating-linear-gradient(90deg, var(--red) 0, var(--red) 22px, transparent 22px, transparent 30px);
+    opacity: 0.13;
+  }
+
+  /* footer */
+  footer {
+    background: var(--ink);
+    color: rgba(245,240,232,0.4);
+    padding: 28px 48px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  footer strong { color: rgba(245,240,232,0.7); }
+
+  @media (max-width: 640px) {
+    header { padding: 36px 20px; }
+    header h1 { font-size: 40px; }
+    .logistics-section, .hotels-section { padding: 28px 20px; }
+    .phase-header { padding: 28px 20px; flex-direction: column; gap: 6px; }
+    .phase-number { font-size: 56px; }
+    .days-container { padding: 0 20px 32px; }
+    .day-card { grid-template-columns: 1fr; gap: 6px; }
+    .legend-bar { padding: 14px 20px; }
+    footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-kana">ようこそ · Welcome to Japan</div>
+  <h1>33 Days in <em>Japan</em></h1>
+  <div class="header-meta">
+    <div class="meta-item"><span class="meta-label">Travellers</span><span class="meta-value">5 Adults</span></div>
+    <div class="meta-item"><span class="meta-label">Dates</span><span class="meta-value">May 11 – June 12, 2026</span></div>
+    <div class="meta-item"><span class="meta-label">Bases</span><span class="meta-value">Tokyo · Osaka · Tokyo</span></div>
+    <div class="meta-item"><span class="meta-label">From</span><span class="meta-value">Ottawa, Canada</span></div>
+  </div>
+</header>
+
+<!-- LEGEND -->
+<div class="legend-bar">
+  <span class="legend-label">Legend</span>
+  <span class="legend-item"><span class="leg-dot" style="background:var(--red)"></span>Active city day</span>
+  <span class="legend-item"><span class="leg-dot" style="background:var(--ink)"></span>Day trip</span>
+  <span class="legend-item"><span class="leg-dot" style="background:var(--border)"></span>Rest / flex</span>
+  <span class="legend-item"><span class="leg-dot" style="background:var(--gold)"></span>Travel / transit</span>
+  <span class="legend-item"><span class="leg-dot" style="background:var(--new)"></span>★ New addition</span>
+</div>
+
+<!-- LOGISTICS -->
+<div class="logistics-section">
+  <h2>Essential Logistics &amp; Planning Notes</h2>
+  <div class="logistics-grid">
+    <div class="logistics-card">
+      <h3>Rail Passes &amp; IC Cards</h3>
+      <ul>
+        <li>Buy a <strong>21-day JR Pass</strong> before leaving Canada. Covers Shinkansen Hikari/Kodama, Narita Express, Nikko via JR, Kamakura, and most intercity travel. Activate on your first intercity hop — not during city-only days.</li>
+        <li>For <strong>Nozomi</strong> (fastest Shinkansen, 2h30m Tokyo–Osaka), purchase the supplemental <em>Nozomi/Mizuho Ticket</em> on top of your JR Pass.</li>
+        <li>Load a <strong>Suica IC card</strong> (Tokyo) and <strong>ICOCA</strong> (Osaka) for all metro, subway, and local buses — JR Pass doesn't cover these.</li>
+      </ul>
+    </div>
+    <div class="logistics-card">
+      <h3>Tokyo → Osaka (May 26)</h3>
+      <ul>
+        <li>Tokaido Shinkansen from <strong>Tokyo Station → Shin-Osaka Station</strong>.</li>
+        <li>Hikari (JR Pass): ~2h53m · Nozomi (supplement): ~2h30m.</li>
+        <li>Window seat <strong>D/E on the right side</strong> facing Osaka for Mt. Fuji views — best ~25–35 min after Tokyo departure.</li>
+        <li>After the omakase lunch, trains run frequently with no need to pre-book a specific time. Just show up with JR Pass.</li>
+      </ul>
+    </div>
+    <div class="logistics-card">
+      <h3>Book Well In Advance</h3>
+      <ul>
+        <li>🎟 <strong>Ghibli Museum</strong> — already booked ✓ (May 22, 12:00 PM slot)</li>
+        <li>🎨 <strong>TeamLab Planets</strong> — ✓ BOOKED · May 20, 11:30–12:00 · 5 adults</li>
+        <li>🎨 <strong>TeamLab Borderless</strong> — ✓ BOOKED · May 24, 11:30–12:00 · Azabudai Hills</li>
+        <li>🗼 <strong>Tokyo Skytree Night View</strong> — ✓ BOOKED · May 15, 18:30–18:59 · Booking ID: ARS_SKYTREE_LINK-20260501-8RA4 · includes alcoholic drink</li>
+        <li>🌆 <strong>Shibuya Sky</strong> — ✓ BOOKED · May 16, 18:40–18:59 · ¥3,400/person · Order: 00396-2026-0502-8100-0550-0017</li>
+        <li>🐋 <strong>Osaka Aquarium Kaiyukan</strong> — ✓ BOOKED · May 28, 14:00–14:15 · 5 adults · ¥13,500 paid · Order: 00290-2026-0501-8100-8140-0004</li>
+        <li>🎤 <strong>LiSA Nagoya concert</strong> — ✓ CONFIRMED · May 19, 19:00 JST · Nippon Gaishi Hall · buy remaining tickets at <strong>eplus.tickets/en/sf/ibt/detail/0534530001</strong></li>
+        <li>🥩 <strong>Gyukatsu Motomura (May 14 dinner)</strong> — book via tablecheck.com (search "Gyukatsu Motomura Shinjuku") to avoid the 45–90 min walk-in queue. Or go at 5:00–5:30pm on a weekday.</li>
+        <li>🎂 <strong>Jeffrey's Birthday dinner (Jun 9)</strong> — if doing omakase or yakiniku, book 1–2 weeks ahead. Birthday cake: order from a patisserie 2 days before.</li>
+        <li>🍖 <strong>Kobe beef teppanyaki (Jun 2)</strong> — reserve 1–2 weeks ahead for 5 people at Steak Land Kobe or Misono.</li>
+        <li>🏯 <strong>Omakase lunch (May 26)</strong> — reserve for 5 in advance; many counters require 2+3 split for groups.</li>
+      </ul>
+    </div>
+    <div class="logistics-card">
+      <h3>Osaka Day Trip Logistics</h3>
+      <ul>
+        <li><strong>Kyoto:</strong> Keihan Line from Yodoyabashi (~45 min, ¥430, not JR Pass) or JR from Osaka Station (~28 min, JR Pass covered).</li>
+        <li><strong>Nara:</strong> Kintetsu Limited Express from Osaka Namba (~35 min, ~¥680, not JR Pass) or JR Yamatoji Rapid from Osaka (~50 min, JR Pass).</li>
+        <li><strong>Kobe:</strong> JR from Osaka Station (~30 min, JR Pass covered).</li>
+        <li><strong>Himeji:</strong> Hikari Shinkansen from Shin-Osaka (~30 min, JR Pass covered).</li>
+      </ul>
+    </div>
+    <div class="logistics-card">
+      <h3>Seasonal Tips (May–June)</h3>
+      <ul>
+        <li>Late May / early June begins <em>tsuyu</em> (rainy season). Carry a compact umbrella daily from around May 28 onward.</li>
+        <li>Temperatures: 18–26°C. Light layers, breathable clothes, comfortable walking shoes.</li>
+        <li>Expect 12,000–18,000 steps on active days. Feet first — fashion second.</li>
+        <li>Mt. Fuji visibility in May is 40–60% — go for the experience regardless.</li>
+      </ul>
+    </div>
+    <div class="logistics-card">
+      <h3>Money &amp; Practicalities</h3>
+      <ul>
+        <li>Japan is still <strong>heavily cash-based</strong>. Carry ¥10,000–25,000 per person on active days.</li>
+        <li>7-Eleven, Family Mart, and Lawson ATMs accept international cards reliably.</li>
+        <li>Pick up pocket WiFi or a SIM card at Narita upon arrival (desk in arrivals hall).</li>
+        <li><strong>No tipping</strong> — ever. It can be considered rude.</li>
+        <li>Google Maps is excellent for Japanese train navigation.</li>
+      </ul>
+    </div>
+    <div class="logistics-card">
+      <h3>Good to Know — Practical Tips</h3>
+      <ul>
+        <li><strong>Shinkansen oversized luggage:</strong> Suitcases with total dimensions 160–250cm must be placed in a reserved "oversized luggage space" behind the last row of seats — and you must reserve that specific seat in advance. Most standard luggage (carry-on + medium suitcase) falls under 160cm and is exempt. Check your bag dimensions before travel.</li>
+        <li><strong>No public rubbish bins:</strong> Japan has almost no street bins outside convenience stores. Carry a small plastic bag for your trash at all times. Convenience stores (7-Eleven, Family Mart, Lawson) have bins — use them. You'll get used to it quickly.</li>
+        <li><strong>Suica card loading:</strong> Load ¥3,000–5,000 at airport machines on arrival. Top up at any konbini, JR machine, or subway station. The card works on nearly every train, metro, bus, and as payment at most convenience stores.</li>
+        <li><strong>Google Translate camera:</strong> Point your phone camera at any Japanese menu and Translate will overlay the English translation in real time. Indispensable for hole-in-the-wall restaurants with no English menu.</li>
+        <li><strong>Restaurant plastic models / ticket machines:</strong> Most specialist restaurants (ramen, gyukatsu, etc.) use vending machines at the entrance — insert money, select your dish, get a ticket, hand it to the staff. English options are increasingly common. For restaurants with no ticket machine, plastic food models in the window show the dishes — point at what you want.</li>
+        <li><strong>Shoes on / off etiquette:</strong> Remove shoes at traditional restaurants with tatami seating, temple interiors, and many ryokan. Look for a raised entry area (genkan) and a collection of slippers — that's your signal.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- HOTELS -->
+<div class="hotels-section">
+  <h2>Hotel Bases</h2>
+  <div class="hotels-grid">
+    <div class="hotel-card">
+      <div class="hotel-phase">Tokyo I</div>
+      <div class="hotel-name">Hotel Mystays Premier Hamamatsucho</div>
+      <div class="hotel-dates">May 12 – May 26</div>
+      <div class="hotel-address">1-8-5 Hamamatsucho, Minato-ku, Tokyo 105-0013</div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-phase">Osaka</div>
+      <div class="hotel-name">Hotel Keihan Namba Grande</div>
+      <div class="hotel-dates">May 26 – June 7</div>
+      <div class="hotel-address">2-11-13 Nambanaka, Naniwa-ku, Osaka 556-0011</div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-phase">Tokyo II</div>
+      <div class="hotel-name">Tokyo Bay Shiomi Prince Hotel</div>
+      <div class="hotel-dates">June 7 – June 12</div>
+      <div class="hotel-address">2-8-16 Shiomi, Koto-ku, Tokyo 135-0052</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PHASE 1: TOKYO I -->
+<!-- ═══════════════════════════════════════ -->
+<div class="phase">
+  <div class="phase-header">
+    <div class="phase-number">01</div>
+    <div class="phase-info">
+      <div class="phase-city">Tokyo I &nbsp;<span>東京</span></div>
+      <div class="phase-dates">May 11 – May 25 &nbsp;·&nbsp; 15 Days &nbsp;·&nbsp; Hotel Mystays Premier Hamamatsucho</div>
+    </div>
+  </div>
+
+  <div class="days-container">
+
+    <!-- DAY 1 — May 11 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">01</div>
+        <div class="day-date"><span class="day-weekday">Mon</span><span class="day-datenum">May 11</span></div>
+        <span class="day-tag tag-transit">Flight Day</span>
+      </div>
+      <div class="day-content">
+        <h3>Flight Day from Ottawa</h3>
+        <ul class="activity-list">
+          <li>Flight departs Ottawa. Keep passports, chargers, medication, and one change of clothes in carry-on bags.</li>
+          <li>Rest on the plane, hydrate, and sleep if you can — the goal is arriving in reasonable shape.</li>
+          <li>Keep tomorrow low-pressure: you land in the afternoon, not the morning.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DAY 2 — May 12 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">02</div>
+        <div class="day-date"><span class="day-weekday">Tue</span><span class="day-datenum">May 12</span></div>
+        <span class="day-tag tag-travel">Arrival</span>
+      </div>
+      <div class="day-content">
+        <h3>Arrive in Tokyo</h3>
+        <ul class="activity-list">
+          <li>Arrive Narita at <strong>3:50 PM</strong>. Pick up pocket WiFi or SIM at the arrivals hall desk. Load Suica IC cards at the JR vending machines before boarding the train.</li>
+          <li><strong>Narita Express (N'EX)</strong> from Narita Airport to Hamamatsucho (via Tokyo Station): ~55–65 min. JR Pass covered if activated. Otherwise ¥3,070/person.</li>
+          <li>Check in to <strong>Hotel Mystays Premier Hamamatsucho</strong>. Unpack only what you need for the first night.</li>
+          <li>Short local walk along Hamamatsucho / Daimon — low pressure, no agenda.</li>
+        </ul>
+        <div class="logistics-note"><strong>Hotel:</strong> Hotel Mystays Premier Hamamatsucho — 1-8-5 Hamamatsucho, Minato-ku, Tokyo 105-0013. This is a clean Hamamatsucho base — close to the JR Yamanote line and within walking distance of Daimon.</div>
+        <div class="food-block">
+          <div class="food-label">First Meal in Japan</div>
+          <p>Easy dinner near Hamamatsucho or Daimon — find a neighbourhood ramen shop and order by pointing at the plastic food models outside or the picture menu. Try <strong>tonkotsu</strong> (pork bone broth) or <strong>shoyu</strong> (soy sauce). This is jetlag food — comforting and warm.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 3 — May 13 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">03</div>
+        <div class="day-date"><span class="day-weekday">Wed</span><span class="day-datenum">May 13</span></div>
+        <span class="day-tag tag-active">Active</span>
+      </div>
+      <div class="day-content">
+        <h3>Tsukiji · Ginza · YONEX · age.3 · Tokyo Tower</h3>
+        <ul class="activity-list">
+          <li><strong>Tsukiji Outer Market</strong> (9:00–10:30am) — Tsukijishi, Chuo-ku, Tokyo. The outer market is still very much alive with sushi stalls, tamagoyaki shops, and fishmongers. Graze the stalls: fresh nigiri at stools from ¥600–1,500, <em>tamagoyaki</em> (vendors give free samples — take one, buy the whole stick for ¥300), sea scallops grilled on the half-shell, crab legs. Stalls are open from 5–6am but perfectly operational and enjoyable at 9am — no need to rush an early start. Free to enter.</li>
+          <li><strong>UNIQLO Ginza</strong> (open from 11am) — 6-9-5 Ginza, Chuo-ku. Open daily 11am–9pm. The 12-floor flagship stocks Japan-exclusive designs, superior fits, and collaborations not available abroad. Great for practical clothing that travels light.</li>
+          <li><strong>MUJI Ginza</strong> (optional, opens 11am) — 3-3-5 Ginza, Chuo-ku. The flagship spans multiple floors. Good for travel-useful Japanese everyday items and minimalist design goods.</li>
+          <li><strong>TRAVELER'S FACTORY STATION</strong> — Gransta underground mall, Tokyo Station, 1-9-1 Marunouchi, Chiyoda-ku. Open weekdays 8am–9pm, weekends 9am–9pm. Handmade leather-bound notebooks and travel accessories from Japan's most beloved stationery brand.</li>
+          <li><strong>YONEX Tokyo Showroom</strong> (afternoon) — Shimbashi PLACE 2F, 1-12-9 Shinbashi, Minato-ku, Tokyo 105-0004. A 5-minute walk from the Hamamatsucho hotel. Open on weekdays — call ahead to confirm hours. Browse the full current racket, apparel, and footwear lineup. The showroom carries products not available in Canadian retail, including Japan-market colorways and limited releases.</li>
+          <li><strong>Tokyo Tower</strong> (after 7pm for best lighting) — 4-2-8 Shiba-koen, Minato-ku, Tokyo 105-0011. Open daily 9am–11pm (last ticket 10:30pm). Main Deck (150m): ¥1,200/adult. The tower is illuminated orange-white at night — arrive at dusk to catch both the sunset and the lights coming on. Walk from Hamamatsucho hotel in ~15 min.</li>
+        </ul>
+        <div class="new-section">
+          <div class="new-section-label">age.3 Ginza — Tokyo's Viral Fried Sandwich (Afternoon Snack)</div>
+          <p><strong>age.3 Ginza</strong> (アゲサン) — 1-24-11 Ginza, Chuo-ku, Tokyo 104-0061 (Sugiura Building 1F). <strong>Open Tue–Sun 11am–7pm; closed Monday.</strong> A tiny takeout-only stall in the heart of Ginza serving crispy deep-fried bread sandwiches packed with bold fillings — viral across social media in Japan and now a Tripadvisor Travelers' Choice winner. Staff hand out menus while you queue; the line moves fast.<br><br>
+          <strong>What to order:</strong> Sweet — <em>crème brûlée</em> (the standout; creamy, torched, not too sweet), <em>original whipped cream</em> (¥100 — the lightest and most popular). Savory — <em>grilled keema curry</em>, <em>yakiniku beef short rib</em>, <em>egg salad</em>. Order a mix: 1–2 sweet + 1 savory each (¥100–800 per sandwich). Takeaway only — eat in the small park directly across the street.<br><br>
+          <strong>Queue tip:</strong> 30–60 min at peak times. Weekday afternoons (3–5pm) are shorter. Closing hour also has shorter queues. Fits perfectly as a late-afternoon snack between Ginza shopping and heading to Tokyo Tower.</p>
+        </div>
+        <div class="food-block">
+          <div class="food-label">Today's Flavours</div>
+          <p><strong>Tsukiji morning:</strong> <em>Tamagoyaki</em> hot from the grill (sweet, eggy, ordered by the stick), fresh tuna nigiri on a paper plate eaten standing up, a paper cup of <em>dashi</em> from a fishmonger. Budget ¥1,500–3,000 for a full graze. <strong>Evening:</strong> Dinner near Tokyo Tower — Azabu, Shiba, or Hamamatsucho have good local izakayas away from tourist pricing.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 4 — May 14 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">04</div>
+        <div class="day-date"><span class="day-weekday">Thu</span><span class="day-datenum">May 14</span></div>
+        <span class="day-tag tag-active">Active</span>
+      </div>
+      <div class="day-content">
+        <h3>Shinjuku Day</h3>
+        <ul class="activity-list">
+          <li><strong>Shinjuku Gyoen National Garden</strong> (late morning, 11am–1pm) — one of Tokyo's finest parks. 58 hectares of formal French/English gardens, a Japanese landscape garden, and a greenhouse. ¥500 entry. Open 9am–6pm (last entry 5:30pm); closed Mon. A slow, beautiful way to ease into the day — no need to rush here.</li>
+          <li>Camera shopping in west Shinjuku: <strong>Camera Box</strong> and <strong>Shinjuku Discount Camera</strong> on Camera Street (west exit area). Most shops open from 10–11am.</li>
+          <li><strong>Tokyo Metropolitan Government Building South Observatory</strong> — free panoramic skyline views from 202m. Located at 2-8-1 Nishi-Shinjuku, Shinjuku-ku. Usually open until ~21:30 (check current hours). 5-minute walk from the camera shops.</li>
+          <li><strong>Udon Shin</strong> lunch (if queue is manageable) — 4-2-12 Shinjuku, Shinjuku-ku; 3-minute walk from Shinjuku Station South Exit. Open 11am–3pm / 5pm–9pm. Tabelog Top 100. Only 12 seats — use the virtual queue ticket system: take a number early, go shopping/explore, return at your allocated time. Famous for the handmade <em>niku-tama</em> (beef &amp; raw egg yolk udon) and <em>carbonara udon</em> (parmesan, butter, bacon tempura). Budget ¥1,000–1,500. Worth the effort.</li>
+        </ul>
+        <div class="new-section">
+          <div class="new-section-label">Gyukatsu Motomura Dinner — Tokyo's Most Famous Beef Cutlet</div>
+          <p><strong>Gyukatsu Motomura — Shinjuku South Exit Branch</strong> (牛かつもと村 新宿南口店) — B1F, 3-32-2 Shinjuku, Shinjuku-ku, Tokyo 160-0022. Open daily 11am–11pm. A 3-minute walk from Shinjuku Station South Exit. This is the chain that invented Tokyo's gyukatsu obsession — and is now consistently ranked one of the most essential restaurant experiences in the city.<br><br>
+          What is it: deep-fried beef cutlet (rare-to-medium, breaded in panko) served with a small personal hot stone to finish grilling each piece to your exact doneness preference. The set (¥1,930–3,060 depending on size) comes with barley rice (free refills!), miso soup, cabbage, potato salad, pickled veg, and warabi mochi dessert. Four dipping sauces: wasabi soy, horseradish, rock salt, and shoyu. The 1.5 cutlet set (¥2,600) is the sweet spot for most appetites.<br><br>
+          <strong>Queue strategy:</strong> Waits can hit 45–90 min at peak times (noon–2pm, 6–8pm). Go at 5:00–5:30pm on a weekday before the dinner rush — many report walking straight in or 15-minute waits at that window. Alternatively, reservations are now available via <strong>tablecheck.com</strong> — book in advance.</p>
+        </div>
+        <div class="new-section">
+          <div class="new-section-label">Post-Dinner: Omoide Yokocho + Golden Gai</div>
+          <ul>
+            <li><strong>Omoide Yokocho</strong> (Memory Lane) — west side of Shinjuku Station. Look for it on Google Maps. A smoke-filled alley of 20+ tiny yakitori stalls, unchanged since the 1950s. Even just passing through after gyukatsu for a beer and skewer is the move. Best 6pm–midnight.</li>
+            <li><strong>Golden Gai</strong> — 5-minute walk from Omoide Yokocho, Kabukicho area. A labyrinth of 200 tiny themed bars, each seating 5–8 people. Look for English-welcoming signs. One drink per bar, then wander to the next. Avoid any bar where someone tries to recruit you from the street.</li>
+          </ul>
+        </div>
+        <div class="food-block">
+          <div class="food-label">The Full Shinjuku Eating Plan</div>
+          <p><strong>Lunch:</strong> Udon Shin (if queue works out) — handmade noodles in a 12-seat alley shop, Tabelog Top 100. <strong>Dinner:</strong> Gyukatsu Motomura Shinjuku South — interactive tableside rare beef cutlet, ¥2,600/person for the 1.5 set. <strong>After:</strong> One drink at Omoide Yokocho, one bar at Golden Gai. This is a flagship Shinjuku night.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 5 — May 15 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">05</div>
+        <div class="day-date"><span class="day-weekday">Fri</span><span class="day-datenum">May 15</span></div>
+        <span class="day-tag tag-active">Active</span>
+      </div>
+      <div class="day-content">
+        <h3>Asakusa · Tokyo Skytree (Night View ✓) · Tsukishima Monja Street</h3>
+        <ul class="activity-list">
+          <li><strong>Senso-ji Temple</strong> (late morning, ~10:30am) — 2-3-1 Asakusa, Taito-ku. Free entry, always open. Walk the full Nakamise Shopping Street for traditional snacks and souvenirs. Get your fortune (omikuji) from the wooden box — shake it, draw a stick, match the number to the drawer. Wander the quieter shrines behind the main hall, away from the main drag.</li>
+          <li>Walk along the <strong>Sumida River</strong> promenade toward the Skytree — a pleasant walk with views of the old pagoda and the new tower side by side.</li>
+          <li>Afternoon: browse the <strong>Tokyo Solamachi</strong> shopping complex at the Skytree base (1-1-2 Oshiage, Sumida-ku) — 312 shops and restaurants across 4 floors. <strong>Pokémon Center Skytree Town</strong> is on the 4th floor (East Yard 4F) — worth a look even if Shibuya is the main Pokémon stop on Day 6. This location has Skytree-exclusive Pokémon merchandise including Edo Kiriko glassware and tenugui towels you won't find anywhere else. Open 10am–9pm.</li>
+          <li><strong>Tokyo Skytree — Night View Ticket ✓ BOOKED</strong> — Entry window: <strong>18:30–18:59</strong>. Booking ID: <strong>ARS_SKYTREE_LINK-20260501-8RA4</strong>. Includes alcoholic drink. Present booking confirmation at the dedicated advance-booking counter (separate from the walk-up queue — shorter). You have until ~18:59 to enter; stay as long as you like after that. The night panorama of Tokyo is extraordinary — all 35+ million people's lights spread to every horizon.</li>
+          <li>After Skytree (~9pm): head to <strong>Tsukishima</strong> for a late monjayaki dinner — the area restaurants are open until 11pm.</li>
+        </ul>
+        <div class="logistics-note">
+          <strong>Skytree confirmed details:</strong> Night View Ticket (Tembo Deck 450m) + Alcoholic Drink. Entry 18:30–18:59, May 15, 2026. Use the advance booking counter on arrival — avoids the main queue. The Tembo Deck is at 450m; the glass-floor Tembo Galleria (350m spiral above) costs extra on the day if you want it (¥1,000 supplement, buy at the deck).<br><br>
+          <strong>Getting there:</strong> From Asakusa, Tokyo Skytree is a 15-min walk along the Sumida River, or 2 stops on the Tobu Skytree Line from Asakusa Station to Tokyo Skytree Station (¥160).
+        </div>
+        <div class="new-section">
+          <div class="new-section-label">Hidden Gem Dinner: Tsukishima Monja Street — Tokyo's Soul Food</div>
+          <p><strong>Tsukishima Monja Street</strong> (Nishinakadori Shopping Street, Tsukishima, Chuo-ku) — Take the Yurakucho Line or Oedo Line to <strong>Tsukishima Station, Exit 7</strong>. The entrance to the covered street is right in front of you. Over 80 restaurants specializing in <em>monjayaki</em> — Tokyo's version of okonomiyaki: a runnier, crispier griddle pancake with toppings, cooked right on the iron plate at your table. Restaurants open 11am–11pm.<br><br>
+          <strong>Tsukishima Monja Moheji</strong> (3-16-9 Tsukishima; open Mon–Fri 11:30am–11pm, Sat–Sun 11am–11pm) — fresh Tsukiji seafood, famous for squid ink monja. <strong>Koboreya Musubi</strong> — more refined, Japanese-wood interior, 58 types of sake and shochu. Order the <em>seafood mentaiko mochi monja</em> regardless of where you sit. Each person cooks their own dish (¥900–1,600) on a table griddle and eats directly off the iron with tiny spatulas.</p>
+        </div>
+        <div class="food-block">
+          <div class="food-label">Asakusa Snacks + Monja Dinner + Skytree Drink</div>
+          <p><strong>Nakamise:</strong> <em>Ningyo-yaki</em> (tiny character-shaped sponge cakes with red bean, hot from the mold), <em>imo yokan</em> (sweet potato jelly cake), melonpan. Budget ¥300–600 for the whole street. <strong>Skytree included drink:</strong> Take it at the bar area of the Tembo Deck — the cocktails are simple but the backdrop of the Tokyo skyline makes them memorable. <strong>Dinner:</strong> Tsukishima monjayaki — ¥1,500–2,500/person with drinks. Wear something casual; the sauce sticks.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 6 — May 16 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">06</div>
+        <div class="day-date"><span class="day-weekday">Sat</span><span class="day-datenum">May 16</span></div>
+        <span class="day-tag tag-active">Active</span>
+      </div>
+      <div class="day-content">
+        <h3>Meiji Shrine · Harajuku · Shibuya · Shibuya Sky ✓</h3>
+        <ul class="activity-list">
+          <li><strong>Meiji Jingu Shrine</strong> (10:30–noon) — 1-1 Yoyogi Kamizono-cho, Shibuya-ku, Tokyo 151-8557. Free entry, always open. 70 hectares of forested grounds — Japan's most important Shinto shrine. Saturday mornings sometimes have traditional ceremonies in the inner courtyard.</li>
+          <li><strong>Harajuku / Takeshita Street</strong> (noon–1:30pm) — Tokyo's pop-culture fashion street, immediately adjacent to Meiji Shrine. Crepes, wild fashion, rainbow candy floss. The contrast with the shrine next door is jarring and wonderful.</li>
+          <li><strong>Shibuya PARCO</strong> (15-1 Udagawacho, Shibuya-ku) — afternoon browsing across its floors of art, design, fashion, and pop-culture. <strong>Pokémon Center Shibuya is on the 6th floor</strong> — since Mega Tokyo Ikebukuro is temporarily closed, this is the natural replacement and you're already in the building. Full-size Pokémon Center with a life-size Mewtwo statue and a Design Lab for custom Pokémon merchandise. Stock includes Shibuya-exclusive items not sold at other branches. Open daily 11am–9pm. Budget 30–60 min inside.</li>
+          <li><strong>Shibuya Crossing</strong> (5–7pm) — watch from the 2nd floor Starbucks or Mag's Park viewing spot first, then walk it. Saturday evening crowds are dense and electric.</li>
+          <li><strong>Shibuya Sky — ✓ BOOKED</strong> — Entry window: <strong>18:40–18:59, May 16, 2026.</strong> Purchase number: 00396-2026-0502-8100-0550-0017. ¥3,400/person. Open-air 360° rooftop at Shibuya Scramble Square, 2-24-12 Shibuya, Shibuya-ku. Present ticket (phone or printed) at the dedicated advance-booking counter — separate from the walk-up queue. Arrive by 18:35. No time limit on your stay once inside. The post-crossing night views from the rooftop are spectacular — you can see the Crossing directly below and the full Tokyo skyline in every direction.</li>
+        </ul>
+        <div class="new-section">
+          <div class="new-section-label">Iconic Lunch: AFURI Ramen Ebisu — Yuzu Shio</div>
+          <p><strong>AFURI Ramen</strong> — Ebisu location (1-1-7 Ebisu, Shibuya-ku; open daily from 11am). A 10-minute walk from the Harajuku/Meiji area or a short train ride. The signature <em>yuzu shio ramen</em> (¥1,390) is a delicate, clear chicken broth infused with Japanese citrus yuzu — completely unlike heavy tonkotsu. Light enough to eat on a warm May day. Order by vending machine at the entrance (English interface available). The <em>cold spicy yuzu tsukemen</em> is also excellent.</p>
+        </div>
+        <div class="food-block">
+          <div class="food-label">Today's Full Flavours</div>
+          <p><strong>Lunch:</strong> AFURI Ebisu — yuzu shio ramen. <strong>Harajuku snack:</strong> Crepe on Takeshita Street — the matcha-strawberry cream version is the local favourite. <strong>Dinner after Shibuya Sky:</strong> The Scramble Square building itself has a restaurant floor. Or walk to <strong>Nonbei Yokocho</strong> (Drunkard's Alley, 1 min from Shibuya Station) — a lantern-lit alley of small bars and casual restaurants for a late-night group wind-down.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 7 — May 17 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">07</div>
+        <div class="day-date"><span class="day-weekday">Sun</span><span class="day-datenum">May 17</span></div>
+        <span class="day-tag tag-rest">Rest / Flex</span>
+      </div>
+      <div class="day-content">
+        <h3>Full Omotesando Day</h3>
+        <ul class="activity-list">
+          <li>Relaxed start — Omotesando shops open from 11am, so sleep in and arrive around 11–11:30am.</li>
+          <li><strong>Omotesando Hills</strong> (start here) — Tadao Ando's spiral shopping complex built around an open atrium. 4-12-10 Jingumae, Shibuya-ku, Tokyo 150-0001. Open daily 11am–9pm (restaurants until 11pm).</li>
+          <li>Walk the full Omotesando boulevard — the most architecturally interesting commercial street in Tokyo. Prada's glass diamond building (Herzog &amp; de Meuron), Tod's, Comme des Garçons, Dior. The buildings are art objects.</li>
+          <li><strong>Nezu Museum</strong> (optional, 6-5-1 Minami-Aoyama; open Tue–Sun 10am–5pm; ¥1,500) — a private collection of East Asian art housed in Kengo Kuma's stunning building, with one of Tokyo's most serene Japanese gardens hidden behind it.</li>
+          <li>Aoyama side streets for fashion boutiques, concept stores, and design-forward cafés.</li>
+          <li>Intentionally one-zone day — group splits and regroups freely without losing time to transit.</li>
+        </ul>
+        <div class="new-section">
+          <div class="new-section-label">Iconic Lunch: Tonkatsu Maisen Omotesando</div>
+          <p><strong>Tonkatsu Maisen Omotesando</strong> (4-8-5 Jingumae, Shibuya-ku; open 11am–9pm) — a 5-minute walk from Omotesando Hills. Japan's most iconic tonkatsu restaurant, housed in a beautifully converted 1929 public bathhouse. The <em>rosu katsu</em> (fatty pork loin) set at ¥2,750 is the one to get. The queue moves fast at non-peak hours (2–4pm). The building alone — high ceilings, old tile, wooden benches — is worth seeing.</p>
+        </div>
+        <div class="food-block">
+          <div class="food-label">Today's Flavours</div>
+          <p><strong>Lunch:</strong> Tonkatsu Maisen — in a converted 1929 public bathhouse, one of Tokyo's most memorable restaurant settings. <strong>Matcha afternoon:</strong> <em>Azuki to Kouri</em> (Omotesando area) — Michelin-starred pastry chef Miho Horio's kakigori (shaved ice) shop. The azuki-and-meringue flavour is transformative. <strong>Dinner:</strong> Small soba restaurant in Aoyama or return to Hamamatsucho for a neighbourhood meal.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 8 — May 18 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">08</div>
+        <div class="day-date"><span class="day-weekday">Mon</span><span class="day-datenum">May 18</span></div>
+        <span class="day-tag tag-active">Active</span>
+      </div>
+      <div class="day-content">
+        <h3>Akihabara Electric Town — Full Day</h3>
+        <ul class="activity-list">
+          <li><strong>Akihabara Electric Town</strong> (morning + afternoon) — centered around Sotokanda, Chiyoda-ku, Tokyo 101-0021. Start at <strong>Radio Kaikan</strong> (1-15-16 Sotokanda) — 8 floors of anime merch, trading cards, figures, and limited editions. This is the anchor building for the whole district.</li>
+          <li><strong>Steins;Gate landmarks walk</strong> around Radio Kaikan — a pilgrimage for fans of the visual novel. The building's exterior and surroundings are faithfully recreated in the game. Look for the Radio Building across the street, Laox, and the distinctive grid of Electric Town.</li>
+          <li><strong>C-labo / Card Labo</strong> — save the exact Akihabara location to Google Maps before the day. Open most days from 11am. Multiple floors of trading cards, collectibles, and sealed product.</li>
+          <li><strong>Yodobashi Camera Akiba</strong> (1-1 Kanda-Hanaokamachi, Chiyoda-ku) — the largest electronics store in Japan, open daily 9:30am–10pm. Everything from gaming peripherals to cameras to anime merch. Could spend hours here.</li>
+          <li>Multi-floor <strong>arcades</strong>: Taito Station and GiGO (formerly Sega) both have 5–6 floors of UFO catcher machines, rhythm games, and retro cabinets. Best in the late afternoon when Japanese gamers are after school/work.</li>
+          <li><strong>Maach Ecute Kanda Manseibashi</strong> — a short walk north of Akihabara (1-25-4 Kanda Sudacho, Chiyoda-ku; open daily 11am–10pm). A beautifully converted 1912 train station viaduct housing small artisan food and craft shops. Sit at the terrace over the Kanda River — one of Tokyo's best-kept secret dining spots. Far from touristy.</li>
+        </ul>
+        <div class="logistics-note"><strong>Getting around Akihabara:</strong> The main Electric Town exit of JR Akihabara Station drops you directly into the district. Most shops open 10–11am and close 8–9pm. Weekday afternoons are much less crowded than weekends. The Chiyoda Line subway also serves Akihabara if coming from elsewhere.</div>
+        <div class="food-block">
+          <div class="food-label">Hidden Gem Dinner — Jomon Yakitori</div>
+          <p><strong>Jomon</strong> (じょうもん) — a hidden yakitori restaurant loved by locals, often found by wandering into the back streets of the Akihabara area. The charcoal grill is the centrepiece; the sake pours are generous; the staff are warm even with no shared language. Arrive early (6pm) or queue, and avoid rush hour waits. The food: chicken skewers over binchotan charcoal, grilled with precision — <em>negima, tsukune, kawa</em>. Order everything. Note: the restaurant itself is smoky in the way that proves the food is made over real fire, not a gas grill.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 9 — May 19 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">09</div>
+        <div class="day-date"><span class="day-weekday">Tue</span><span class="day-datenum">May 19</span></div>
+        <span class="day-tag tag-daytrip">Day Trip + Concert</span>
+      </div>
+      <div class="day-content">
+        <h3>Nagoya Day Trip — Sightseeing + LiSA 「LiVE is Smile Always ～15～」</h3>
+        <ul class="activity-list">
+          <li><strong>Depart Tokyo Station at 8:00–8:30am</strong> on the Nozomi Shinkansen (supplement required on JR Pass; ¥11,090 one-way without pass) → <strong>Nagoya Station</strong> arrives ~9:40–10:10am. Nozomi is the fastest (~1h40m); Hikari (~2h10m, JR Pass covered, depart earlier if using it). Book seats in advance — it's a Tuesday but better safe.</li>
+          <li><strong>Nagoya Castle</strong> (10:30am–3pm) — 1-1 Honmaru, Naka-ku, Nagoya 460-0031. Open daily 9:00am–4:30pm, last admission 4:00pm. Adults ¥500. The main castle keep (tenshu) is currently undergoing renovation until ~2028, but the beautifully restored <em>Honmaru Goten</em> palace is fully open — arguably more impressive than most castle interiors anyway. Take the Nagoya City Subway Meijo Line from Nagoya Station to Shiyakusho Station (10 min, ¥210).</li>
+          <li><strong>Osu Shopping District</strong> (early afternoon) — a covered shopping street spanning several blocks near Osu Kannon temple (2-21-47 Osu, Naka-ku). Mix of vintage clothing, electronics, cheap food stalls, and quirky pop-culture shops. Osu Kannon Temple itself is free. Take subway from Shiyakusho to Jingu-Nishi, then walk.</li>
+          <li><strong>Miso katsu lunch</strong> at Yabaton — Nagoya's signature dish and one of Japan's most famous regional foods. Thick, crispy pork cutlet smothered in a rich red miso sauce. <em>Yabaton Honten</em> (main branch: Kaminotei Building B1F, 3-6-18 Osu, Naka-ku; open from 11am). Budget ¥1,200–1,800.</li>
+          <li><strong>Head to the concert venue</strong> by 5:45–6:00pm to allow time for merchandise queue. LiSA concerts sell tour goods that often sell out within the first hour doors open.</li>
+        </ul>
+        <div class="logistics-note" style="border-left-color: var(--red);">
+          <strong>🎤 LiSA — LiVE is Smile Always ～15～ · ✓ TICKET CONFIRMED</strong><br>
+          <strong>Venue:</strong> Nippon Gaishi Hall (Kuroko-kun HALL · 日本ガイシホール), 5-1-1 Higashimatabee-cho, Minami-ku, Nagoya-shi, Aichi 457-0833<br>
+          <strong>Date &amp; Time:</strong> Tue May 19, 2026 · 19:00 JST (7:00 PM) · Doors typically open 18:00<br>
+          <strong>Capacity:</strong> 10,000 (arena format)<br>
+          <strong>Concert length:</strong> Typically 2–2.5 hours — expect finish ~9:15–9:30pm<br>
+          <strong>Venue access:</strong> JR Tokaido Line (local) from Nagoya Station → <strong>Kasadera Station</strong>, ~15 min, ¥230. Then 10-min walk east — the venue is visible from the station exit. Leave Nagoya Station by 18:00 to allow for the walk and merchandise queue.<br>
+          <strong>Return to Tokyo:</strong> (A) Late train same night — concert ends ~9:30pm → Kasadera to Nagoya Station (~9:50pm) → last Nozomi Tokyo-bound departs Nagoya ~22:30, arrives Tokyo ~00:10am. (B) Stay overnight in Nagoya (more comfortable) — return on the 7–8am Nozomi, arrives Tokyo by 9am in time for TeamLab Planets at 11:30am on May 20.
+        </div>
+        <div class="food-block">
+          <div class="food-label">Nagoya Food Signatures</div>
+          <p><strong>Miso katsu</strong> (lunch, Yabaton): The red Hatcho miso sauce is earthy, rich, and nothing like the broth you drink at ramen. It changes the pork cutlet completely. Order the set with shredded cabbage and miso soup.<br>
+          <strong>Hitsumabushi</strong> (if time allows, a true Nagoya bucket-list item): Grilled unagi (eel) over rice, eaten in three ways — plain, with condiments (wasabi/nori/spring onion), and finally poured with dashi as ochazuke. One of Japan's great regional dishes, nearly exclusive to Nagoya. If you have a free lunch hour in Nagoya on another day or morning of May 20, seek it out. Bincho near Nagoya Station is excellent.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 10 — May 20 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">10</div>
+        <div class="day-date"><span class="day-weekday">Wed</span><span class="day-datenum">May 20</span></div>
+        <span class="day-tag tag-active">Active</span>
+      </div>
+      <div class="day-content">
+        <h3>Odaiba Bay Day + TeamLab Planets</h3>
+        <div class="logistics-note"><strong>⚠ Morning note:</strong> If you returned from Nagoya late the previous night (~midnight), sleep in. Your TeamLab Planets slot is at <strong>11:30am</strong> — no need to rush. If you stayed overnight in Nagoya, take the 7–8am Nozomi and you'll be in Tokyo well before your entry window.</div>
+        <ul class="activity-list">
+          <li><strong>TeamLab Planets TOKYO — ✓ BOOKED</strong> — 6-1-16 Toyosu, Koto-ku, Tokyo 135-0064. <strong>Admission: Wed May 20, 2026 · 11:30–12:00 entry window · 5 adults.</strong> No re-entry. Budget 90 min–2 hours inside. Bring socks you don't mind getting wet, or buy cheap socks at the gift shop (¥300). Features: barefoot water-walking room, infinite crystal universe, live plant/flower labyrinth, bodyscape room. Present your ticket (phone or printed) at the gate — the 11:30 window means arrive at 11:25.</li>
+          <li><strong>Getting there from central Tokyo:</strong> Tokyo Metro Yurakucho Line to Toyosu Station (Exit 3), then 7-min walk. Or from Shiomi hotel: Rinkai Line from Shinkiba, then Yurakucho Line (check Google Maps for fastest routing from your specific location). Budget 30–40 min door-to-gate.</li>
+          <li>After Planets: Yurikamome Line from Shijo-mae → <strong>Odaiba-kaihinkoen Station</strong> (~15 min, ¥260 on Suica). Walk to DiverCity Tokyo Plaza.</li>
+          <li><strong>Unicorn Gundam statue</strong> at Festival Square (1-1-10 Aomi, Koto-ku) — the 20m RX-0 Unicorn Gundam, free to view. Light-up show at set times at dusk (check at tokyo-decks.com for current schedule).</li>
+          <li>Waterfront promenade walk — views of Rainbow Bridge and the Tokyo skyline across the bay are best at sunset and after dark.</li>
+        </ul>
+        <div class="food-block">
+          <div class="food-label">Today's Flavours</div>
+          <p><strong>TeamLab Planets</strong> has a vegan ramen restaurant inside the complex — it's actually legitimately good and a novel way to end the museum visit. <strong>Odaiba dinner:</strong> DiverCity and the nearby Aqua City mall (1-7-1 Daiba, Minato-ku; open until 11pm) have a full restaurant floor. Or grab ramen at a food truck along the waterfront. Odaiba is not known for its food, so eat wherever looks busy and local.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 11 — May 21 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">11</div>
+        <div class="day-date"><span class="day-weekday">Thu</span><span class="day-datenum">May 21</span></div>
+        <span class="day-tag tag-active">Active</span>
+      </div>
+      <div class="day-content">
+        <h3>Ikebukuro Fandom Day</h3>
+        <ul class="activity-list">
+          <li><strong>Sunshine City</strong> complex (Sunshine City alpa 2F, 3-1-2 Higashi-Ikebukuro, Toshima-ku) — Pokémon Center Mega Tokyo is currently <strong>temporarily closed</strong>; the Pokémon fix is covered on Day 6 at Shibuya PARCO instead. Sunshine City still has multi-floor arcades, specialty stores, and the Sunshine Aquarium on the roof.</li>
+          <li><strong>One Piece Mugiwara Store</strong> — also in Sunshine City. Leave room for the group to browse separately and regroup.</li>
+          <li>Anime stores, card shops, <strong>Round One</strong> arcade (multi-floor, open late), and any other specific stores on individual lists.</li>
+          <li><strong>Animate Ikebukuro</strong> (1-20-7 Higashi-Ikebukuro; 9 floors; open daily 11am–9pm) — Japan's largest anime merchandise chain. Manga, figures, CDs, doujinshi, and licensed goods across every floor. This is the flagship store of the entire country.</li>
+          <li>Dinner in Ikebukuro — the station basement and nearby streets have abundant options.</li>
+        </ul>
+        <div class="food-block">
+          <div class="food-label">Today's Flavours</div>
+          <p><strong>Ikebukuro has excellent ramen</strong> — the area around the east exit is full of ramen shops including Fuunji (for tsukemen/dipping ramen) which is highly rated. For something lighter, grab fresh <em>gyoza</em> from any of the dumpling restaurants near the station.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 12 — May 22 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">12</div>
+        <div class="day-date"><span class="day-weekday">Fri</span><span class="day-datenum">May 22</span></div>
+        <span class="day-tag tag-active">Active</span>
+      </div>
+      <div class="day-content">
+        <h3>Ghibli Museum ✓ · Inokashira Park · Kichijoji</h3>
+        <ul class="activity-list">
+          <li>Relaxed morning — don't stack any attraction before your noon timed ticket. Have a slow brunch near the hotel.</li>
+          <li><strong>Ghibli Museum</strong> at <strong>12:00 PM</strong> (already booked ✓) — 1-1-83 Shimorenjaku, Mitaka, Tokyo 181-0013. No re-entry. The museum is organized like stepping into a Ghibli film: every hallway, staircase, and detail is hand-designed. Inside: original animation layouts and cells, a rooftop robot soldier, an exclusive short film shown only here (changes every few months), and Miyazaki's own bookshelf recreated. Allow 2–3 hours.</li>
+          <li>After the museum: 10-minute walk to <strong>Inokashira Park</strong> (1-18-31 Gotenyama, Musashino-shi) — a beautiful park surrounding a large pond. Rowboats available to rent (¥700/30 min). Swans, cafés on the bank, an excellent afternoon wind-down.</li>
+          <li><strong>Kichijoji</strong> neighbourhood — the area around the park (exit via the north gate) is one of Tokyo's most beloved local shopping and dining districts. Independent shops, jazz bars, the famous Harmonica Yokocho (a narrow alley of tiny bars and restaurants, only open from 5pm).</li>
+        </ul>
+        <div class="new-section">
+          <div class="new-section-label">Iconic Snack: Satou Menchi Katsu — Tokyo's Most Famous Croquette Queue</div>
+          <p><strong>Satou</strong> (さとう) — 1-1-8 Kichijoji Honmachi, Musashino-shi, Tokyo 180-0004. Open daily 10am–8pm (or until sold out — they often sell out by 6pm). This is a premium butcher shop with one legendary street snack: <em>menchi katsu</em>, a large deep-fried minced beef croquette, sold for ¥320 per piece. A queue forms outside. The queue is always worth it — the crust is shattering-crispy and the interior is juicy, beefy, and hot. Buy 2–3 each and eat them standing on the street. This is the definitive Kichijoji street food experience. Go in the afternoon (3–4pm) when the post-museum crowd has thinned.</p>
+        </div>
+        <div class="food-block">
+          <div class="food-label">Today's Flavours</div>
+          <p><strong>Ghibli Museum café</strong> (if open during your slot) — small café inside the museum with Ghibli-themed sweets and drinks. <strong>Inokashira afternoon:</strong> Coffee and cake at one of the lakeside cafés — peaceful, local, perfect. <strong>Satou menchi katsu</strong> standing on the Kichijoji street. <strong>Dinner:</strong> Harmonica Yokocho (ハモニカ横丁) opens around 5pm — a labyrinth of 30+ tiny bars and restaurants in a covered alley. Each fits 6–8 people, very local, completely wonderful for a last pre-Yokohama-day evening.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 13 — May 23 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">13</div>
+        <div class="day-date"><span class="day-weekday">Sat</span><span class="day-datenum">May 23</span></div>
+        <span class="day-tag tag-daytrip">Day Trip</span>
+      </div>
+      <div class="day-content">
+        <h3>Day Trip: Yokohama — Cup Noodles &amp; Minato Mirai</h3>
+        <ul class="activity-list">
+          <li><strong>Getting there:</strong> JR from Tokyo Station to Yokohama Station (~30 min, JR Pass covered), or direct from Hamamatsucho (JR Keihin-Tohoku Line).</li>
+          <li><strong>Cup Noodles Museum Yokohama</strong> (10:00–18:00, last admission 17:00) — 2-3-4 Shinko, Naka-ku, Yokohama. Design your own Cup Noodle flavour in the custom cup factory (book in advance at the museum, ¥500 extra). Interactive and genuinely fun.</li>
+          <li><strong>Minato Mirai</strong> waterfront — walk the harbour promenade with views of the Bay Bridge. The Landmark Tower (68 floors, observation deck ~¥1,000) and the Cosmo World ferris wheel are nearby.</li>
+          <li>Keep the rest flexible — Yokohama is a pleasant wander without over-scheduling.</li>
+          <li>Return to Tokyo for a simple dinner.</li>
+        </ul>
+        <div class="food-block">
+          <div class="food-label">Yokohama Flavours</div>
+          <p>Yokohama has Japan's most famous <strong>Chinatown (Chukagai)</strong> — within walking distance of Minato Mirai. Over 600 Chinese restaurants and shops. Have lunch here: <em>nikuman</em> (pork buns), Peking duck, or a full dim sum lunch at a sit-down restaurant. This is a more authentic Chinatown experience than most Chinese cities offer.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 14 — May 24 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">14</div>
+        <div class="day-date"><span class="day-weekday">Sun</span><span class="day-datenum">May 24</span></div>
+        <span class="day-tag tag-active">Active</span>
+      </div>
+      <div class="day-content">
+        <h3>TeamLab Borderless ✓ · Azabudai Hills</h3>
+        <ul class="activity-list">
+          <li><strong>TeamLab Borderless — ✓ BOOKED</strong> — Azabudai Hills Garden Plaza B, B1F, 1-2-4 Azabudai, Minato-ku, Tokyo. <strong>Admission: Sun May 24, 2026 · 11:30–12:00 entry window.</strong> No re-entry. No limit on duration of stay after admission. This is the larger, newer of the two TeamLab museums — massive interconnected rooms where digital artworks spill into each other continuously. Budget 2–3 hours minimum; many people stay longer. Present ticket at the gate; arrive by 11:25.</li>
+          <li><strong>Getting there:</strong> Tokyo Metro Hibiya Line or Oedo Line to Azabu-Juban Station, then a 5–7 min walk to Azabudai Hills. Or Hibiya Line direct to Roppongi Station (Exit 1), 8-min walk through the Roppongi Hills complex.</li>
+          <li>After Borderless: the <strong>Azabudai Hills</strong> complex itself is worth exploring — the new public square, the gardens between towers, and the food floor in the basement.</li>
+          <li>Afternoon: gentle wander, no pressure to overload after a full museum experience. Optional: walk to Tokyo Tower (15 min) for a final view since you're already in Minato-ku.</li>
+        </ul>
+        <div class="tip-box">TeamLab Borderless and Planets are two different museums with different artworks — both are worth doing. Book Borderless here, Planets was added to Day 10 (Odaiba).</div>
+        <div class="food-block">
+          <div class="food-label">Today's Flavours</div>
+          <p><strong>Azabudai Hills</strong> (the new development housing Borderless) has an excellent array of restaurants in its basement and ground floor levels — from Japanese to French to ramen. A great opportunity for a slightly elevated lunch in a beautiful new space. Dinner: keep it nearby and simple after a full museum morning.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 15 — May 25 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">15</div>
+        <div class="day-date"><span class="day-weekday">Mon</span><span class="day-datenum">May 25</span></div>
+        <span class="day-tag tag-daytrip">Day Trip</span>
+      </div>
+      <div class="day-content">
+        <h3>Mt. Fuji Area + Fuji-Q Highland</h3>
+        <ul class="activity-list">
+          <li><strong>Leave early</strong> — aim for a 7:00–7:30am departure from Shinjuku. JR Chuo Line from Shinjuku to Otsuki (~1h15m), then Fujikyu Railway to Fuji-Q Highland Station (~50 min). Total ~2 hours. Check the Q-chan app before going for ride wait times.</li>
+          <li><strong>Fuji-Q Highland</strong> (5-6-1 Shinnishihara, Fujiyoshida, Yamanashi 403-0017) — Japan's most famous thrill-ride park at the foot of Mt. Fuji. Check official calendar for park hours before the trip. Home to multiple world-record coasters: Fujiyama, Do-Dodonpa, Takabisha (steepest drop in the world).</li>
+          <li>On a clear day, Mt. Fuji towers above the entire park — the views are extraordinary even without climbing.</li>
+          <li>If weather and energy permit after Fuji-Q: Kawaguchiko (Lake Kawaguchi) is 10 min by bus for iconic Fuji lake views.</li>
+          <li>Return to Tokyo for a simple dinner near the hotel — keep it low-key before the big Osaka move tomorrow.</li>
+        </ul>
+        <div class="logistics-note"><strong>May visibility note:</strong> Mt. Fuji is visible ~40–60% of the time in May. Check the weather forecast a few days before. Fuji-Q is worth going regardless — if the mountain is hidden, the rides are still there. <strong>Fuji-Q Express Pass</strong> is available online and cuts queue time dramatically.</div>
+        <div class="food-block">
+          <div class="food-label">Today's Flavours</div>
+          <p>The Fuji Five Lakes area is known for <strong>hoto noodles</strong> — flat, thick udon-style noodles simmered in a thick miso broth with winter squash and vegetables. A hearty, regionally unique dish served at Hoto Fudou (famous local chain) near Lake Kawaguchi. Perfect fuel after a day of coasters.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /days tokyo 1 -->
+</div><!-- /phase 1 -->
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PHASE 2: OSAKA -->
+<!-- ═══════════════════════════════════════ -->
+<div class="phase">
+  <div class="phase-header">
+    <div class="phase-number">02</div>
+    <div class="phase-info">
+      <div class="phase-city">Osaka <span>大阪</span></div>
+      <div class="phase-dates">May 26 – June 6 &nbsp;·&nbsp; 12 Days &nbsp;·&nbsp; Hotel Keihan Namba Grande</div>
+    </div>
+  </div>
+
+  <div class="days-container">
+
+    <!-- DAY 16 — May 26 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">16</div>
+        <div class="day-date"><span class="day-weekday">Tue</span><span class="day-datenum">May 26</span></div>
+        <span class="day-tag tag-travel">Travel</span>
+      </div>
+      <div class="day-content">
+        <h3>Omakase Lunch · Shinkansen · First Night in Osaka</h3>
+        <ul class="activity-list">
+          <li>Check out of Hamamatsucho hotel. Arrange luggage forwarding to Osaka hotel (<em>takkyubin</em>) the night before if desired — bags arrive same-day and you travel light on the Shinkansen.</li>
+          <li><strong>Omakase lunch in Tokyo</strong> — confirm in advance that your chosen restaurant can seat 5 together; many sushi counters require splitting 2+3.</li>
+          <li><strong>Shinkansen: Tokyo Station → Shin-Osaka Station</strong>. Hikari (JR Pass, ~2h53m) or Nozomi with supplement (~2h30m). Right-side D/E seats for Mt. Fuji views ~25–35 min after departure.</li>
+          <li>Check in at <strong>Hotel Keihan Namba Grande</strong> (2-11-13 Nambanaka, Naniwa-ku, Osaka 556-0011).</li>
+          <li>First Osaka evening: low-pressure snack walk along <strong>Dotonbori</strong> canal. See the Glico Running Man neon sign. Graze street food without trying to do everything tonight.</li>
+        </ul>
+        <div class="food-block">
+          <div class="food-label">Osaka Street Food — First Contact</div>
+          <p>Tonight's mission: the Holy Trinity of Osaka street food. <strong>Takoyaki</strong> (octopus balls drizzled with sauce and bonito flakes — watch the vendor flip them in the round mold), <strong>kushikatsu</strong> (deep-fried skewers of everything — NEVER double-dip the communal sauce, this is sacred law), and <strong>okonomiyaki</strong> (the savoury pancake stuffed with cabbage, pork, and whatever you like, painted with sauce and mayo). Budget ¥1,500–2,500 for all three.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 17 — May 27 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">17</div>
+        <div class="day-date"><span class="day-weekday">Wed</span><span class="day-datenum">May 27</span></div>
+        <span class="day-tag tag-active">Active</span>
+      </div>
+      <div class="day-content">
+        <h3>Kuromon · Den Den Town · Shinsaibashi · Dotonbori</h3>
+        <ul class="activity-list">
+          <li><strong>Kuromon Ichiba Market</strong> (morning, 9:00–11:00am) — 2-4-1 Nipponbashi, Chuo-ku. Open daily roughly 9am–6pm (individual stalls vary). Osaka's famous 170-stall covered market. Eat at the stalls: grilled oysters served at the counter (~¥400/each), fresh crab legs, A5 wagyu slices seared on a grill, sea urchin on rice. Budget ¥2,000–4,000 for a proper Kuromon feed.</li>
+          <li><strong>Nipponbashi Den Den Town</strong> (afternoon) — Osaka's equivalent of Akihabara. Electronics, anime, manga, figures, and maid cafés centered around Nipponbashi / Ebisucho, Naniwa-ku. Good for anything on the collector list.</li>
+          <li>Drift north into <strong>Shinsaibashi-suji</strong> — Osaka's most famous covered shopping arcade, over 600m long. Mainstream fashion, cosmetics, and souvenirs.</li>
+          <li>Continue into <strong>Dotonbori</strong> for evening lights. Stop at <strong>Daiki Suisan Kaiten Sushi</strong> (1-7-24 Dotonbori, Chuo-ku; open daily 11am–11pm) if anyone wants a quick and excellent revolving sushi lunch or early dinner — fresh seafood directly sourced, great value, very popular with locals.</li>
+        </ul>
+        <div class="new-section">
+          <div class="new-section-label">Hidden Gem: Izakaya Toyo + Ura Namba</div>
+          <p><strong>Izakaya Toyo</strong> — made famous on Netflix's Street Food: Asia, but genuinely worth it beyond the hype. Chef Toyo flame-grills tuna cheeks with a blowtorch in the open air at his street-side stall in Dotonbori's back streets. The tuna maki is the sleeper hit. Expect a queue; it moves fast. Find it by searching "Izakaya Toyo Osaka" on Google Maps.<br><br>
+          After dinner, walk to <strong>Ura Namba</strong> — the hidden neighbourhood just south of Dotonbori. Over 100 tiny bars and restaurants packed into alleyways, and unlike Dotonbori itself it's almost entirely locals. Old wooden buildings, warm lantern light, no English signs needed. Walk in, point at what looks good, sit at whatever counter has a stool free. This is the real Osaka bar culture. Best after 8pm.</p>
+        </div>
+        <div class="food-block">
+          <div class="food-label">Tonight's Flavours</div>
+          <p><strong>Dinner in Dotonbori:</strong> Izakaya Toyo for the tuna experience, then a wander into Ura Namba for drinks. Or, if skipping Toyo, try <strong>Okonomiyaki Mizuno</strong> (1-4-15 Dotonbori, Chuo-ku; open 11am–9pm, closed Tue) — the Netflix-featured okonomiyaki spot that has been in business since 1945, now on its third generation. The <em>ikatama</em> (squid) and <em>butatama</em> (pork) are the ones to order. Expect a short line; it moves well.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 18 — May 28 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">18</div>
+        <div class="day-date"><span class="day-weekday">Thu</span><span class="day-datenum">May 28</span></div>
+        <span class="day-tag tag-active">Active</span>
+      </div>
+      <div class="day-content">
+        <h3>Osaka Castle · Kaiyukan Aquarium ✓</h3>
+        <ul class="activity-list">
+          <li><strong>Osaka Castle Park and grounds</strong> (late morning) — visit the grounds and exterior of the 16th-century castle (1-1 Osakajo, Chuo-ku). The moat, stone walls, and cherry tree-lined approach are beautiful even without entering the interior museum. Interior museum: ¥600 if the group wants to go in. Take Osaka Metro Chuo Line to Osakajo-koen Station.</li>
+          <li><strong>Osaka Aquarium Kaiyukan — ✓ BOOKED</strong> — 1-1-10 Kaigandori, Minato-ku, Osaka 552-0022. <strong>Admission: Thu May 28, 2026 · 14:00–14:15 entry window · 5 adults · ¥2,700×5 = ¥13,500 (prepaid).</strong> Purchase number: 00290-2026-0501-8100-8140-0004. One of the world's largest aquariums — central tank houses whale sharks and manta rays. Budget 2–2.5 hours inside. Present your e-ticket at the entrance; the 14:00 window means arrive at 13:55. Getting there from the castle: Osaka Metro Chuo Line from Osakajo-koen → Osakako Station (~20 min, ¥280). Walk 5 min to the aquarium.</li>
+          <li><strong>Tempozan Harbour Village</strong> (adjacent to Kaiyukan, after the aquarium) — the Giant Ferris Wheel has views over the harbour and mountains. The Tempozan Marketplace shopping area is good for a post-aquarium snack.</li>
+          <li>Return to Namba for dinner (Osaka Metro Chuo Line from Osakako → Hommachi, then Midosuji Line south).</li>
+        </ul>
+        <div class="logistics-note"><strong>Osaka Castle to Kaiyukan:</strong> From Osakajo-koen Station (Chuo Line) to Osakako Station (Chuo Line) — direct, ~20 min, ¥280. Very easy connection making this a natural combined day.</div>
+        <div class="food-block">
+          <div class="food-label">Tonight's Flavours</div>
+          <p>Return to Namba for a classic <strong>okonomiyaki dinner</strong> — this time, find a table-grill restaurant where you cook it yourself. Pour the batter, add your fillings, flip the pancake at the right moment. The theatrical cooking process is half the meal. <em>Boteju</em> chain is reliable and beginner-friendly.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 19 — May 29 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">19</div>
+        <div class="day-date"><span class="day-weekday">Fri</span><span class="day-datenum">May 29</span></div>
+        <span class="day-tag tag-daytrip">Day Trip</span>
+      </div>
+      <div class="day-content">
+        <h3>Kyoto Day Trip #1 — Fushimi Inari · Gion · Pontocho</h3>
+        <ul class="activity-list">
+          <li><strong>Go early</strong> — aim to be on the train by 7:00–7:30am. <strong>Keihan Line from Yodoyabashi</strong> (10 min from Namba) to Fushimi Inari Station: ~45 min, ¥430. Or JR from Osaka Station to Kyoto Station (JR Pass), then JR Nara Line to Inari Station: ~50 min total.</li>
+          <li><strong>Fushimi Inari Taisha</strong> (arrive before 8:00am) — the shrine of 10,000 vermilion torii gates winding up sacred Mount Inari (68 Fukakusa Yabunouchi-cho, Fushimi-ku, Kyoto). Go as far up the trail as energy allows — even 30–45 min up puts you past the tourist cutoff. Misty morning light through the tunnels is extraordinary. Free, always open.</li>
+          <li>Optional afternoon: <strong>kimono rental</strong> if the group wants photos — rental shops cluster near Gion.</li>
+          <li><strong>Gion district</strong> (late afternoon/early evening) — Kyoto's famous geisha quarter. Walk Hanamikoji Street in hopes of spotting a maiko (apprentice geisha) gliding to an evening appointment. Best at dusk. Don't photograph maiko who appear to be rushing.</li>
+          <li><strong>Pontocho Alley</strong> — a narrow lantern-lit passage of restaurants and bars along the Kamo River. Atmospheric dinner destination.</li>
+          <li>Return to Osaka after dinner.</li>
+        </ul>
+        <div class="tip-box">Walk at least to the first major rest area (Yotsutsuji intersection, ~30 min up) — the view over Kyoto from there is excellent, and above that point you'll have the path largely to yourself.</div>
+        <div class="food-block">
+          <div class="food-label">Kyoto Flavours + Hidden Gem</div>
+          <p><strong>Lunch at Nishiki Market</strong> ("Kyoto's Kitchen") — 604-8354 Nishiki-koji, Nakagyo-ku (runs east–west between Shijo and Sanjo, just north of Shijo-dori; open most stalls 9am–6pm). Graze as you walk: pickled vegetables (<em>tsukemono</em>), grilled skewers, fresh sesame tofu, hot <em>tamagoyaki</em>. 130+ vendors in a covered 400m arcade. Budget ¥1,000–1,500 for a full graze.<br><br>
+          <strong>Pontocho hidden gem:</strong> Most tourists walk the main Pontocho alley but miss <strong>Hozenji Yokocho-style backstreets</strong> — the tiny side alleys that branch off Pontocho toward the Kamo River. These are where the <em>machiya</em> (traditional townhouses) turned tiny bars and kaiseki spots cluster. Spot <strong>Lilo Coffee</strong> if you want a quiet specialty coffee stop before dinner. For dinner itself: find a <em>kappou</em> (counter-style) restaurant on Pontocho where you can watch the chef work — Kyoto counter dining is its own art form. Budget ¥4,000–8,000/person for a proper Pontocho dinner.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 20 — May 30 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">20</div>
+        <div class="day-date"><span class="day-weekday">Sat</span><span class="day-datenum">May 30</span></div>
+        <span class="day-tag tag-daytrip">Day Trip</span>
+      </div>
+      <div class="day-content">
+        <h3>Nara Day Trip — Deer, Todaiji, Ancient Capital</h3>
+        <ul class="activity-list">
+          <li><strong>Kintetsu Limited Express from Osaka Namba → Kintetsu-Nara Station</strong>: ~35 minutes, ~¥680 each way. Not JR Pass. Trains every 30 min. Aim to arrive before 9am — gets very crowded by 10am.</li>
+          <li><strong>Kasuga Taisha Shrine</strong> (first stop — 30-min walk from station, or taxi) — one of Japan's oldest shrines, established 768 AD. Hundreds of bronze and stone lanterns line mossy paths. Sacred deer roam freely throughout. ¥500 for inner precincts.</li>
+          <li><strong>Nara Park</strong> — over 1,000 freely roaming sika deer, sacred messengers of the gods. Buy <em>shika senbei</em> (deer crackers, ¥200/pack) from vendors and watch the chaos. Gentle, harmless, and genuinely magical.</li>
+          <li><strong>Todaiji Temple</strong> — Japan's largest wooden building housing the 15-metre bronze Daibutsu (Great Buddha), cast in 752 AD. One of the most awe-inspiring sights in all of Japan. ¥800.</li>
+          <li>Walk back toward the station via <strong>Nakatanidou</strong> — the viral mochi-pounding shop where staff pound fresh mochi at superhuman speed (29 Hashimotocho, Nara). Watch the performance, then eat a warm piece.</li>
+        </ul>
+        <div class="new-section">
+          <div class="new-section-label">Added: Persimmon Leaf Sushi for the Train Home</div>
+          <p>Before boarding back to Osaka, stop at <strong>Kakinohasushi Hompo Tanaka</strong> — right at the Kintetsu-Nara Station entrance. Buy a box of <em>kakinoha-zushi</em>: pressed sushi wrapped in preserved persimmon leaves, a Nara specialty for over 1,300 years. The leaf infuses a subtle fragrance into the rice. Eat it on the train back.</p>
+        </div>
+        <div class="food-block">
+          <div class="food-label">Nara Flavours</div>
+          <p><strong>Also worth trying:</strong> <em>Kofuku-ji's Nakatanidou mochi</em> — fresh and warm, chewy and barely sweet. <strong>Higashimuki Shopping Street</strong> on the way back to the station for regional sweets and snacks. The persimmon leaf sushi box (¥800–1,200) makes for a perfect train snack back to Osaka.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 21 — May 31 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">21</div>
+        <div class="day-date"><span class="day-weekday">Sun</span><span class="day-datenum">May 31</span></div>
+        <span class="day-tag tag-rest">Rest / Flex</span>
+      </div>
+      <div class="day-content">
+        <h3>Recovery Day · Orange Street · Shinsekai <span class="new-badge">+ Food Tour Evening</span></h3>
+        <ul class="activity-list">
+          <li>Sleep in. Two consecutive day trips deserves a slow start.</li>
+          <li><strong>Orange Street / Horie</strong> (Tachibana-dori, Minami-Horie area) — Osaka's most design-forward neighbourhood. Independent lifestyle shops, furniture boutiques, concept stores, and excellent cafés. Easy from Namba, low-pressure browsing.</li>
+          <li><strong>Shinsekai</strong> (late afternoon) — the retro working-class district from the 1920s. <strong>Tsutenkaku Tower</strong> (¥900 for views), kushikatsu restaurants everywhere, vintage Osaka atmosphere.</li>
+        </ul>
+        <div class="new-section">
+          <div class="new-section-label">Added: Guided Osaka Night Food Tour (Evening) + Tenpei Gyoza</div>
+          <ul>
+            <li>Replace an aimless Shinsekai wander with a <strong>guided night food walking tour</strong> — one of the best decisions you can make in Osaka. A local guide takes you to 4–6 hidden spots that are impossible to find independently: standing oden bars, backstreet takoyaki shops, small sake spots, and fresh seafood.</li>
+            <li>Several excellent operators: <strong>Magical Trip</strong> (Tripadvisor award winner), <strong>Arigato Travel</strong>, and <strong>Walk Japan</strong> all offer English Osaka night food tours. Budget ¥8,000–12,000 per person including food.</li>
+            <li>Book at least a week in advance at viator.com or the operator's own site.</li>
+            <li><strong>If not doing the tour</strong>: head to <strong>Tenpei Gyoza</strong> in Umeda — a legendary hidden gyoza stall tucked in a quiet backstreet, famous for being stumbled upon by travellers returning from Kyoto late at night. Open until midnight. The gyozas are ordered in batches of 20 (they're small), crispy, packed with flavour, and eaten with cold beer. One of the best spontaneous dinner finds in Osaka. Search "Tenpei Gyoza Umeda" on Google Maps.</li>
+          </ul>
+        </div>
+        <div class="food-block">
+          <div class="food-label">Tonight's Flavours</div>
+          <p>The guided food tour will take care of dinner — typical stops include: standing <em>oden</em> bar (fish cakes, daikon, and konjac simmered in dashi), <em>kushikatsu</em> at a local counter, fresh <em>squid on a stick</em>, and cold Osaka beer in a narrow backstreet. Let the guide lead.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 22 — Jun 1 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">22</div>
+        <div class="day-date"><span class="day-weekday">Mon</span><span class="day-datenum">Jun 1</span></div>
+        <span class="day-tag tag-daytrip">Day Trip</span>
+      </div>
+      <div class="day-content">
+        <h3>Kyoto Day Trip #2 — Arashiyama <span class="new-badge">+ Kinkakuji &amp; Ryoanji</span></h3>
+        <ul class="activity-list">
+          <li>Early departure — JR from Osaka Station to Kyoto Station (JR Pass), then JR Sagano Line to <strong>Saga-Arashiyama Station</strong>. Total ~55 min.</li>
+          <li><strong>Arashiyama Bamboo Grove</strong> (7:30–8:00am) — arrive early. The grove is dramatically more beautiful before the crowds. 10 minutes of misty-morning bamboo silence is worth the 6am alarm.</li>
+          <li><strong>Tenryuji Temple</strong> — UNESCO World Heritage Zen temple with a 14th-century pond garden. Mt. Arashiyama forms the "borrowed scenery" backdrop. ¥500 (garden); ¥800 (main hall).</li>
+          <li>Walk <strong>Togetsukyo Bridge</strong> and the riverside — quintessential Kyoto scenery.</li>
+          <li>Optional: one café break in Arashiyama before heading across town.</li>
+        </ul>
+        <div class="new-section">
+          <div class="new-section-label">Added: Kinkakuji &amp; Ryoanji (Afternoon)</div>
+          <ul>
+            <li>Take a bus or taxi from Arashiyama across town (~30 min) to <strong>Kinkakuji</strong> (the Golden Pavilion) — a Zen temple covered in gold leaf, perfectly reflected in its pond. Go around 1–2pm when the morning tour buses have left. ¥500.</li>
+            <li>A 5-minute walk brings you to <strong>Ryoanji Temple</strong> — Japan's most famous rock garden. Fifteen stones in white raked gravel; no two stones visible simultaneously from any angle. A masterpiece of negative space and intention. ¥600.</li>
+            <li>Head back to Kyoto Station and Osaka from here — Ryoanji is on the northwest side of Kyoto, well-positioned for the exit route.</li>
+          </ul>
+        </div>
+        <div class="food-block">
+          <div class="food-label">Today's Flavours</div>
+          <p><strong>Arashiyama lunch:</strong> <em>Tofu cuisine</em> — Kyoto is the tofu capital of Japan. <em>Yudofu</em> (hot silken tofu in dashi) or a full tofu kaiseki set is the ideal elegant and light lunch amid the temples. <strong>Matcha soft-serve</strong> in Arashiyama is obligatory — the quality of matcha in Kyoto is unmatched anywhere.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 23 — Jun 2 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">23</div>
+        <div class="day-date"><span class="day-weekday">Tue</span><span class="day-datenum">Jun 2</span></div>
+        <span class="day-tag tag-daytrip">Day Trip</span>
+      </div>
+      <div class="day-content">
+        <h3>Kobe Day Trip — Harbour, Kobe Beef &amp; Afternoon Activities</h3>
+        <ul class="activity-list">
+          <li><strong>JR from Osaka Station to Sannomiya Station</strong> (Kobe): ~30 min, JR Pass covered. Trains every 10–15 min. Arrive mid-morning.</li>
+          <li>Light harbour-area walk — <strong>Kobe Harborland</strong> waterfront and the Mosaic Garden for coffee. Then walk to <strong>Meriken Park</strong> (10 min) — the waterfront park with the iconic "BE KOBE" sign, views of the port, and the distinctive red-and-white Kobe Port Tower. Free to visit.</li>
+          <li><strong>Kitano Ijinkan</strong> (morning walk, ~45 min) — a hillside neighbourhood of beautifully preserved 19th-century Western mansions built by foreign diplomats and merchants. Uniquely unlike anywhere else in Japan. The English House, Weathercock House, and Rhine House are all open to visitors. Combination entry ticket available. 15-min walk from Sannomiya Station.</li>
+          <li><strong>Kobe beef teppanyaki lunch</strong> (reservation required — book 1–2 weeks ahead for 5 people). The chef sears world-famous marbled wagyu right in front of you on a flat iron plate. Budget ¥8,000–15,000/person. Recommended: <strong>Steak Land Kobe</strong> (3-7-1 Shimoyamate-dori, Chuo-ku; open from 11am, lunch ¥3,500+) — affordable and excellent — or <strong>Misono</strong> (the original teppanyaki restaurant, est. 1945, Ikuta-dori, Chuo-ku).</li>
+        </ul>
+        <div class="new-section">
+          <div class="new-section-label">Afternoon Options After Beef Lunch</div>
+          <ul>
+            <li><strong>Option A — Nunobiki Herb Gardens &amp; Ropeway</strong> — Japan's largest herb garden, on the mountainside above Shin-Kobe Station (1 stop from Sannomiya by subway, or 20-min walk). Take the ropeway up: round-trip ticket including garden entry ¥1,800. Over 75,000 herbs and flowers of 200 species in bloom, with panoramic views over Kobe and Osaka Bay from the mountaintop. Allow 1.5–2 hours. On the descent, walk down the mountain path and pass the <strong>Nunobiki Waterfall</strong> — one of Japan's three Great Divine Waterfalls, a beautiful 20-min forest hike down.</li>
+            <li><strong>Option B — Nada Sake District (Nadagogo)</strong> — take the Hanshin Main Line from Sannomiya toward Osaka (~8 min to Oishi Station) and explore Japan's most famous sake brewing district. The <strong>Hakutsuru Sake Brewery Museum</strong> (4-5-5 Sumiyoshiminami-machi, Higashinada-ku; free entry) gives you an immersive look at traditional sake-making with tastings including unpasteurised sake rarely found in stores. <strong>Sawa-no-Tsuru Museum</strong> (1-29-1 Uozaki-Nishimachi, Higashinada-ku; open 10am–4pm, closed Wed; free) is another excellent free option with sake samples. A deeply local experience.</li>
+          </ul>
+        </div>
+        <div class="tip-box">Lunch is the best anchor for Kobe beef: easier to book for 5 and more comfortable than an evening reservation that rushes the return to Osaka. The Nunobiki Herb Gardens and ropeway is the more scenic afternoon choice; Nada sake is the more culturally immersive one.</div>
+        <div class="food-block">
+          <div class="food-label">Kobe Beef — What to Order</div>
+          <p>A proper Kobe beef teppanyaki set: small salad, beef course (sirloin and tenderloin cuts), garlic fried rice, miso soup. Order the most marbled cut (A5 Grade). The fat-to-meat ratio genuinely melts at body temperature — eat it slowly and without rushing to the next bite.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 24 — Jun 3 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">24</div>
+        <div class="day-date"><span class="day-weekday">Wed</span><span class="day-datenum">Jun 3</span></div>
+        <span class="day-tag tag-daytrip">Day Trip</span>
+      </div>
+      <div class="day-content">
+        <h3>Kyoto Day Trip #3 — Kiyomizudera · Higashiyama <span class="new-badge">+ Nijo Castle</span></h3>
+        <ul class="activity-list">
+          <li>JR from Osaka Station to Kyoto Station (JR Pass, ~28 min). Head to Higashiyama.</li>
+          <li><strong>Kiyomizudera Temple</strong> (go early, before 10am if possible) — Kyoto's most famous temple perched on the mountainside with a wooden stage cantilevered over the hillside. Sweeping views of the city below. ¥500. 1-294 Kiyomizu, Higashiyama-ku.</li>
+          <li><strong>Higashiyama lanes</strong> (late morning to afternoon) — preserved stone-paved streets of Meiji-era wooden buildings with tea shops, craft galleries, and pottery. <strong>Ninenzaka</strong> and <strong>Sannenzaka</strong> are the most beautiful. Mind the superstition: trip on these stairs and face 3 years of bad luck.</li>
+          <li>Snack breaks and photos — this area is extremely photogenic and worth taking slowly.</li>
+          <li>Stay into early evening for lantern-lit Higashiyama atmosphere.</li>
+        </ul>
+        <div class="new-section">
+          <div class="new-section-label">Added: Nijo Castle — On the Way to Kyoto Station</div>
+          <ul>
+            <li><strong>Nijo Castle</strong> (二条城) — built in 1603 as Tokugawa Ieyasu's Kyoto residence. The famous <em>nightingale floors</em> squeak at every footstep to prevent silent intruders — walk slowly through the Ninomaru Palace and listen to the halls sing. UNESCO World Heritage. ¥1,300.</li>
+            <li>Located between Higashiyama and Kyoto Station — a natural final stop before boarding back to Osaka. Bus or subway from Kiyomizudera to Nijo-jo-mae Station (Tozai Line).</li>
+          </ul>
+        </div>
+        <div class="logistics-note"><strong>Kiyomizudera to Nijo Castle:</strong> Take Kyoto City Bus 206 from Kiyomizumichi bus stop to Nijo-jo-mae (~20 min, ¥260). Then JR or subway from Nijo Station back to Kyoto Station and onward to Osaka.</div>
+        <div class="food-block">
+          <div class="food-label">Higashiyama Street Snacks</div>
+          <p><strong>Eat your way down Ninenzaka:</strong> <em>Yatsuhashi</em> (Kyoto's most famous souvenir confection — folded cinnamon rice crackers, also sold filled with sweet red bean paste as <em>nama yatsuhashi</em>), <em>matcha soft-serve</em>, and <em>kyo-tsukemono</em> (pickled vegetables — Kyoto's own style). Stop at a tea shop for a <em>wagashi</em> (traditional Japanese sweet) with matcha. The teahouses along Sannenzaka are beautifully atmospheric for a mid-afternoon break.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 25 — Jun 4 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">25</div>
+        <div class="day-date"><span class="day-weekday">Thu</span><span class="day-datenum">Jun 4</span></div>
+        <span class="day-tag tag-rest">Rest / Flex</span>
+      </div>
+      <div class="day-content">
+        <h3>North Osaka — Tenjinbashi · YONEX · Umeda Sky</h3>
+        <ul class="activity-list">
+          <li>Easy start and head north later in the morning.</li>
+          <li><strong>Tenjinbashi-suji Shopping Street</strong> — Japan's longest covered shopping arcade (around 1-7 Tenjinbashi, Kita-ku). Low-key, local, full of independent shops selling everything from kitchen supplies to traditional sweets.</li>
+          <li><strong>YONEX Osaka Showroom</strong> at Grand Front Osaka South Building B1F, 4-20 Ofukacho, Kita-ku — if sports gear is still on the list.</li>
+          <li><strong>Umeda Sky Building / Kuchu Teien Observatory</strong> (sunset or after dark) — the stunning "floating garden" connecting two towers via a circular sky bridge at 170m. More architecturally interesting than a standard observation tower. ¥1,500. 1-1-88 Oyodonaka, Kita-ku.</li>
+          <li>Dinner in Umeda or back in Namba — take the subway.</li>
+        </ul>
+        <div class="food-block">
+          <div class="food-label">Today's Flavours</div>
+          <p><strong>Grand Front Osaka</strong> has excellent restaurants across several floors — anything from ramen to French brasserie. Good lunch spot before Umeda Sky. <strong>Dinner option:</strong> Umeda area has <em>revolving sushi</em> (kaiten-zushi) chains and izakayas that are busy with Osaka salarypeople on weekday evenings — excellent local vibe.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 26 — Jun 5 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">26</div>
+        <div class="day-date"><span class="day-weekday">Fri</span><span class="day-datenum">Jun 5</span></div>
+        <span class="day-tag tag-daytrip">Day Trip</span>
+      </div>
+      <div class="day-content">
+        <h3>Flex Kansai · Harukas 300 <span class="new-badge">+ Himeji Castle (Morning)</span></h3>
+        <div class="new-section">
+          <div class="new-section-label">Added: Himeji Castle — Morning (Perfect Use of This Flex Day)</div>
+          <ul>
+            <li>This flex day is the ideal moment for <strong>Himeji</strong> — Japan's most beautiful castle, universally rated as the finest surviving feudal castle in the country. The morning works perfectly: Shinkansen there and back, back in Osaka by early afternoon for Harukas.</li>
+            <li><strong>Hikari Shinkansen from Shin-Osaka → Himeji Station</strong>: ~30 min, JR Pass covered. Take the 8:00–8:30am train to arrive before the tour groups.</li>
+            <li><strong>Himeji Castle</strong> (姫路城) — the "White Heron Castle," a UNESCO World Heritage Site. Never destroyed or rebuilt in 400+ years of history. Climb all 7 floors of the main keep to the top for views over the city. ¥1,000. Open from 9:00am.</li>
+            <li><strong>Koko-en Garden</strong> — directly adjacent to the castle, built on the former samurai residence grounds. Nine connected traditional sub-gardens. Combined entry with castle: ¥1,050. ¥310 separately.</li>
+            <li>Return Shinkansen to Shin-Osaka by 1:00–1:30pm. Half-day, full impact.</li>
+          </ul>
+        </div>
+        <ul class="activity-list">
+          <li><strong>Harukas 300</strong> (evening) — 1-1-43 Abenosuji, Abeno-ku, Osaka 545-0052. Japan's tallest building (300m). Observation deck at sunset or after dark for the best city panorama. Open 9:00–22:00. ¥1,500.</li>
+          <li>Tennoji / Abeno area for dinner — or return to Namba.</li>
+        </ul>
+        <div class="tip-box">Himeji Castle gets very crowded by 10am. Arriving at opening (9am) after a ~8am Shinkansen departure gives you 45–60 min of relatively quiet castle access before the tour groups arrive.</div>
+        <div class="food-block">
+          <div class="food-label">Himeji Specialty</div>
+          <p><strong>Himeji oden</strong> — unlike any oden in Japan. The dashi broth is infused with ginger soy sauce and served with a brush of fresh ginger paste on the side. Vendors cluster near the castle entrance. Eat it standing. It costs ¥200–400 per piece and is one of those quiet regional experiences that stays in memory long after the bigger attractions.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 27 — Jun 6 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">27</div>
+        <div class="day-date"><span class="day-weekday">Sat</span><span class="day-datenum">Jun 6</span></div>
+        <span class="day-tag tag-rest">Rest / Flex</span>
+      </div>
+      <div class="day-content">
+        <h3>Final Osaka Day — Revisit &amp; Farewell</h3>
+        <ul class="activity-list">
+          <li>Sleep in and partially pack. No agenda.</li>
+          <li>Repeat a favourite Osaka area: <strong>Namba, Shinsaibashi, Den Den Town, Kuromon,</strong> or a favourite café.</li>
+          <li>Last-minute shopping: <strong>Daikoku Drug Store</strong> for Japanese skincare and snack gifts, <strong>Namba Walk</strong> underground arcade for fashion.</li>
+          <li>Final <strong>Dotonbori walk</strong> with dessert and photos. Say goodbye to the Glico Man.</li>
+        </ul>
+        <div class="food-block">
+          <div class="food-label">Farewell Osaka Feast</div>
+          <p>Final Osaka dinner: one last round of <strong>takoyaki</strong> for a street snack, and a proper sit-down <strong>okonomiyaki</strong> dinner at a local spot — you've now eaten it before, you know what you love. Or spring for a full kaiseki omakase if the group wants a special farewell meal in Japan's food capital. Budget ¥10,000–15,000/person for omakase; ¥1,500–3,000 for the street food version.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /days osaka -->
+</div><!-- /phase 2 -->
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PHASE 3: TOKYO II -->
+<!-- ═══════════════════════════════════════ -->
+<div class="phase">
+  <div class="phase-header">
+    <div class="phase-number">03</div>
+    <div class="phase-info">
+      <div class="phase-city">Tokyo II &nbsp;<span>東京</span></div>
+      <div class="phase-dates">June 7 – June 12 &nbsp;·&nbsp; 6 Days &nbsp;·&nbsp; Tokyo Bay Shiomi Prince Hotel</div>
+    </div>
+  </div>
+
+  <div class="days-container">
+
+    <!-- DAY 28 — Jun 7 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">28</div>
+        <div class="day-date"><span class="day-weekday">Sun</span><span class="day-datenum">Jun 7</span></div>
+        <span class="day-tag tag-travel">Travel</span>
+      </div>
+      <div class="day-content">
+        <h3>Return to Tokyo · Shiomi Check-In</h3>
+        <ul class="activity-list">
+          <li>Check out of Hotel Keihan Namba Grande. Shinkansen from <strong>Shin-Osaka → Tokyo Station</strong>. Morning departure recommended (~9–10am).</li>
+          <li>Check in at <strong>Tokyo Bay Shiomi Prince Hotel</strong> (2-8-16 Shiomi, Koto-ku, Tokyo 135-0052). This is a practical final base — note it's east of central Tokyo, so Shiomi → Tokyo Station (JR Keihin-Tohoku Line, ~15 min) is your main connection.</li>
+          <li>Afternoon: rest and unpack. This transfer day should stay intentionally light.</li>
+          <li>Easy dinner near Shiomi or Tokyo Station.</li>
+        </ul>
+        <div class="food-block">
+          <div class="food-label">Transition Dinner</div>
+          <p>Tokyo Station basement (<strong>Tokyo Station Ichibangai</strong> and <strong>Gransta</strong> underground mall) has some of Japan's best ekiben (station bento boxes) and ramen shops. Grab dinner here before heading to Shiomi — much better than eating near a hotel in a quiet area.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 29 — Jun 8 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">29</div>
+        <div class="day-date"><span class="day-weekday">Mon</span><span class="day-datenum">Jun 8</span></div>
+        <span class="day-tag tag-rest">Rest / Flex</span>
+      </div>
+      <div class="day-content">
+        <h3>Yanaka Old Town · Ueno · Fukagawa Hidden Gem</h3>
+        <ul class="activity-list">
+          <li>Good low-stress day after the Osaka transfer. From Shiomi hotel: JR Keihin-Tohoku Line to Tokyo Station (~15 min), then JR Yamanote Line to Ueno (~5 min). Very straightforward.</li>
+          <li><strong>Yanaka district</strong> (morning) — a 10-minute walk northwest from Nippori Station (one stop from Ueno on JR Yamanote). One of Tokyo's most atmospheric and least-touristed old-city neighbourhoods. Survived WWII bombing and the postwar reconstruction wave intact — the wooden temples, craft shops, and family businesses remain essentially unchanged from the Showa era.</li>
+          <li>Walk <strong>Yanaka Ginza</strong> covered street — independent butchers, tofu makers, senbei shops, and eccentric cat-themed everything. Deeply local. Pick up <em>menchi katsu</em> (minced meat croquettes, ¥150) hot from a butcher's stall.</li>
+          <li><strong>Yanaka Cemetery</strong> (optional) — an unusually beautiful urban cemetery with hundreds of old cherry trees and moss-covered graves, including the final resting place of the last Tokugawa shogun. Serene and oddly moving.</li>
+          <li><strong>Ueno Park</strong> (afternoon) — a slow stroll through the pond, past the zoo, and up to <strong>Tokyo National Museum</strong> (9-35 Ueno Park, Taito-ku; open Tue–Sun 9:30am–5pm; adults ¥1,000) if anyone wants Japan's premier art collection. Alternatively, the Shinobazu Pond rowboats are relaxing (¥700/30 min).</li>
+          <li><strong>Ameyoko Market</strong> — the bazaar between Ueno and Okachimachi stations under the JR tracks. Dried seafood, cheap cosmetics, clothing, and street snacks. Good for a late afternoon graze.</li>
+        </ul>
+        <div class="new-section">
+          <div class="new-section-label">Hidden Gem Dinner: Fukagawa Meshi — Tokyo's Forgotten Soul Food</div>
+          <p>Since you're based at the Shiomi Prince Hotel (Koto Ward), you're very close to <strong>Fukagawa</strong> — one of Tokyo's oldest fishing districts. Try <strong>fukagawa meshi</strong> for dinner: a dish of clams and long onion slow-cooked in miso, served over rice. It was the humble everyday food of the Edo-era fishermen who lived here, and it's nearly impossible to find outside this neighbourhood.<br><br>
+          <strong>Miyako Restaurant</strong> (2-7-1 Tokiwa, Koto-ku, Tokyo 135-0006; open Tue–Sun 11:30am–2pm, 5:30–8:30pm; closed Mon) — a quiet traditional spot with tatami seating. No English menu; just say "fukagawa meshi set" — they understand. Simple, local, and one of those genuinely off-beaten-path Tokyo experiences. The walk from your hotel is about 15 minutes through the old downtown.</p>
+        </div>
+        <div class="food-block">
+          <div class="food-label">Today's Flavours</div>
+          <p><strong>Yanaka:</strong> Menchi katsu from a butcher stall, fresh tofu from a neighbourhood maker, <em>senbei</em> (rice crackers) bought warm from a small shop. All under ¥500. <strong>Ameyoko afternoon:</strong> Graze the food vendors — yakitori skewers and fresh fruit cups. <strong>Dinner:</strong> Fukagawa meshi at Miyako Restaurant — comfort food from Edo-era Tokyo, right on your doorstep.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 30 — Jun 9 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">30</div>
+        <div class="day-date"><span class="day-weekday">Tue</span><span class="day-datenum">Jun 9</span></div>
+        <span class="day-tag tag-birthday">🎂 Birthday</span>
+      </div>
+      <div class="day-content">
+        <h3>🎂 Jeffrey's Birthday — His Day, His Call</h3>
+        <ul class="activity-list">
+          <li>Sleep in. No alarms unless Jeffrey wants something that requires an early start.</li>
+          <li>The day is structurally unscheduled — this is the trip's intentional open space for personal preference.</li>
+        </ul>
+        <div class="new-section">
+          <div class="new-section-label">Options — Jeffrey's Menu</div>
+          <ul>
+            <li><strong>Nikkō Day Trip</strong> (if the group has energy and wants one last nature day) — Tobu Limited Express from Asakusa Station → Tobu-Nikko (~2hrs). UNESCO World Heritage shrines in dramatic mountain forest. Toshogu Shrine (¥1,300), Shinkyo Bridge (¥300), Kegon Falls (¥570). The Tobu Nikko World Heritage Area Pass (¥3,000) covers round-trip fare + buses. Leave Shiomi by 8–8:30am if doing this. Yuba (tofu skin) lunch at a teahouse near the shrines.</li>
+            <li><strong>Kamakura Coast Day</strong> (more relaxed) — JR Yokosuka Line from Tokyo Station (~55 min, JR Pass). Great Buddha, Hasedera Temple, bamboo grove at Hokokuji, and the laid-back coastal town energy. Seaside lunch, shirasu (tiny white fish) donburi.</li>
+            <li><strong>Full Tokyo City Day</strong> — revisit a favourite neighbourhood, hit any missed spots, or simply explore freely. Final watch shopping, Isetan Shinjuku depachika, or a quiet museum day.</li>
+            <li><strong>Wild Card</strong> — if Jeffrey has something specific in mind that hasn't been on the itinerary, this is the day for it.</li>
+          </ul>
+        </div>
+        <div class="new-section">
+          <div class="new-section-label">🎂 Birthday Dinner — Make It Count</div>
+          <p>Whatever the day brings, the evening is a proper birthday celebration dinner. Some options depending on Jeffrey's taste:<br><br>
+          <strong>🥩 Option A — Wagyu Sukiyaki / Yakiniku splurge:</strong> A full yakiniku or sukiyaki group dinner at a quality Ginza or Nishi-Azabu restaurant. The experience of cooking A5 wagyu at the table, dipping in raw egg, eating with sake — one of Japan's great group dinner rituals. Budget ¥10,000–15,000/person. Recommended chains that punch above their price: <em>Yakiniku Champion</em> (Ebisu or Ikebukuro; open from 5pm), or <em>Ushigoro</em> (Ginza or Omotesando).<br><br>
+          <strong>🍱 Option B — Omakase birthday counter:</strong> A chef's-choice multi-course dinner at a Japanese counter. Intimate, personal, and the chef often acknowledges celebrations. Many mid-range omakase spots run ¥8,000–15,000/person. Book well ahead at tabelog.com or tableall.com.<br><br>
+          <strong>🍜 Option C — Relaxed group izakaya:</strong> Reserve a private tatami room at a good izakaya for the whole group — order as many dishes as wanted, take the time over it. The best izakayas in Shinjuku or Shibuya can be booked for groups of 5 with private rooms. Low-pressure and very Japanese in spirit.<br><br>
+          Whatever is chosen: <strong>order a birthday cake from a Japanese patisserie</strong> to bring. Japan's French-influenced bakeries and cake shops are extraordinary — request a 5-person cake at any <em>Aoki</em> or <em>Cake Okashi</em> shop, or go to <em>Henri Charpentier</em> (Ginza) for an elegant option. Order 2 days ahead.</p>
+        </div>
+        <div class="food-block">
+          <div class="food-label">Birthday Kanpai</div>
+          <p>End the night at a good bar — <strong>Bar High Five</strong> (Ginza; 4-4-13 Ginza B1F; one of Asia's best craft cocktail bars, book ahead) or a rooftop bar with Tokyo night views. Whatever Jeffrey chooses: this is 33 days in Japan, you've all earned a proper toast. お誕生日おめでとう — Happy Birthday, Jeffrey. 🎂</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 31 — Jun 10 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">31</div>
+        <div class="day-date"><span class="day-weekday">Wed</span><span class="day-datenum">Jun 10</span></div>
+        <span class="day-tag tag-rest">Rest / Flex</span>
+      </div>
+      <div class="day-content">
+        <h3>Shimokitazawa · Final Catch-Up Day</h3>
+        <ul class="activity-list">
+          <li>This is the built-in <strong>catch-up flex day</strong> — use it for any missed spots, final shopping, or just a slow wind-down day before the farewell.</li>
+          <li><strong>Shimokitazawa</strong> (afternoon) — Tokyo's most beloved bohemian neighbourhood. Winding back streets of vintage clothing stores, independent record shops, live music venues, and hole-in-the-wall cafés. Often called "Tokyo's Brooklyn." Zero tourist pressure, entirely local energy. Take Odakyu Line from Shinjuku to Shimokitazawa (~10 min, ¥130).</li>
+          <li>No agenda in Shimokitazawa — browse, sit, find a vintage piece, discover a jazz bar. It's a neighbourhood best absorbed without a plan.</li>
+          <li>Last evening: easy dinner wherever feels right. Keep energy for the farewell dinner on Day 32.</li>
+        </ul>
+        <div class="new-section">
+          <div class="new-section-label">Hidden Gem: Village Vanguard + Shimokitazawa's Vinyl Scene</div>
+          <p><strong>Village Vanguard</strong> in Shimokitazawa (2-10-14 Kitazawa, Setagaya-ku; open daily 10am–midnight) — the Tokyo equivalent of a brilliant independent bookshop crossed with a pop culture museum. Sells weird toys, books, rare editions, cult magazines, and objects that don't fit any category. Completely addictive. Then wander the record shops: <strong>Disk Union Shimokitazawa</strong> (2-25-8 Kitazawa) is one of Japan's best second-hand vinyl spots for any genre. If anyone in the group buys music: this is the place.</p>
+        </div>
+        <div class="food-block">
+          <div class="food-label">Today's Flavours</div>
+          <p><strong>Shimokitazawa lunch:</strong> The neighbourhood is excellent for <em>soufflé pancakes</em> at a local brunch spot — fluffy, slow-made, and perfectly Japanese. Several spots along the main street. <strong>Evening:</strong> A standing sushi bar (<em>tachi-gui sushi</em>) near Shinjuku or back in Shimokitazawa — quick, cheap, excellent nigiri. Or a low-key izakaya dinner to preserve appetite for the proper farewell meal tomorrow.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 32 — Jun 11 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">32</div>
+        <div class="day-date"><span class="day-weekday">Thu</span><span class="day-datenum">Jun 11</span></div>
+        <span class="day-tag tag-rest">Rest / Flex</span>
+      </div>
+      <div class="day-content">
+        <h3>Final Tokyo Day — Depachika, Shopping &amp; Farewell Dinner</h3>
+        <ul class="activity-list">
+          <li>Morning: one last walk through a favourite spot — Tsukiji for a breakfast sushi, Asakusa early-morning, or a local café near the hotel.</li>
+          <li><strong>Depachika souvenir run</strong> — Isetan Shinjuku (best depachika in Tokyo), Mitsukoshi Ginza, or any major department store basement. Japanese food gifts to bring home: <em>wagashi</em> (traditional sweets), premium green tea, regional sake, quality snack sets.</li>
+          <li>Finish packing by afternoon and keep the rest local and easy.</li>
+          <li>Final group dinner — book a <strong>private tatami room (zashiki)</strong> at an izakaya. Low table, cushions on the floor, the whole group together. Order a parade of small plates and share everything.</li>
+        </ul>
+        <div class="food-block">
+          <div class="food-label">Farewell Dinner</div>
+          <p>A 3-hour private room izakaya dinner is the ideal format for 5 people on the last night: <em>edamame, sashimi, takoyaki, karaage, gyoza, yakitori,</em> various <em>sushi</em>, a bottle of sake or Sapporo each. End with <em>ochazuke</em> — green tea poured over rice with pickles and seaweed. The Japanese way to close a meal. Toast: <strong>Kanpai! — and mata ne, Nihon.</strong> See you again, Japan.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 33 — Jun 12 -->
+    <div class="day-card">
+      <div class="day-sidebar">
+        <div class="day-number">33</div>
+        <div class="day-date"><span class="day-weekday">Fri</span><span class="day-datenum">Jun 12</span></div>
+        <span class="day-tag tag-transit">Departure</span>
+      </div>
+      <div class="day-content">
+        <h3>Departure — いい旅を / Have a Good Journey</h3>
+        <ul class="activity-list">
+          <li>Easy breakfast and check out. Last konbini run for airport snacks: onigiri, canned coffee, melon bread for the flight.</li>
+          <li>Allow at least <strong>2.5–3 hours before departure</strong> at Narita for international check-in, immigration, and boarding.</li>
+          <li><strong>Narita Express (N'EX) from Tokyo Station</strong>: ~55–60 min to Narita Terminal 1 (most international carriers) or Terminal 2 (JAL, ANA). Confirm your terminal at check-in. JR Pass covered if still active.</li>
+          <li>From Shiomi: JR Keihin-Tohoku Line → Tokyo Station (15 min), then N'EX. Budget 90 min total door-to-check-in desk.</li>
+          <li>At the airport: last duty-free Japanese whisky, a box of regional sweets, and anything from the terminal food hall.</li>
+        </ul>
+        <div class="food-block">
+          <div class="food-label">Last Bites</div>
+          <p>Narita's terminal restaurants include proper ramen and sushi bars — better than most international airports. Grab a seat-style ramen at the terminal before security for a genuine last meal. Or buy a premium <em>ekiben</em> (station bento box) from the terminal food hall to eat on the plane: the Japan Airlines and ANA sections stock excellent ones.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /days tokyo 2 -->
+</div><!-- /phase 3 -->
+
+<footer>
+  <div><strong>Japan · 33 Days · May 11 – June 12, 2026</strong> &nbsp;·&nbsp; 5 Adults · Ottawa → Tokyo → Osaka → Tokyo → Ottawa</div>
+  <div>いい旅を — <em>Have a wonderful journey</em></div>
+</footer>
+
+</body>
+</html>
